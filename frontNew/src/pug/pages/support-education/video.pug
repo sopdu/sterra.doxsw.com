@@ -1,0 +1,41 @@
+include ../../data/support-video
+
+
+
+block content
+    .container.form-js(data-full-length="50" data-page-size="12" data-action="./backend/education-video.json" data-method="GET")
+        .support-education-page__top
+            .support-education-page__title Обучение
+            ul.support-education-page__filter
+                li.support-education-page__filter__item
+                    a.support-education-page__filter__button( data-type="1" href="#") Курсы
+                li.support-education-page__filter__item
+                    a.support-education-page__filter__button.active( data-type="2" href="#") Видеоуроки
+        .support-education-page__control
+
+            .custom-select
+                select.js-select
+                    option(value="0") Кем выдан
+                    option(selected) Версия 4.2
+                    option 123
+                    option 123
+
+            .search-field.js-input-search-field
+                .search-field__icon
+                    +svg-icon('search', 14, 14)
+                input.js-input-search.form-control(value="" placeholder='Поиск по названию' name="q" data-field autocomplete="off")
+                button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+
+        .support-education-page__content.js-body
+            each item in supportVideo
+                .support-education-page__video.js-item
+                    a.support-education-page__video__item__wrap(href="#")
+                        .support-education-page__video__item-image
+                            img(src=item.image)
+                        .support-education-page__video__item__title !{item.title}
+
+        .vacancies-vacant__controll
+            .vacancies-vacant__controll__text.js-control-text Показано 6 из 9
+            button.js-control-more.vacancies-vacant__controll__btn.btn.btn-primary-inverse Еще 3
+
+

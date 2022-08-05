@@ -1,0 +1,304 @@
+.case-page{
+  .text-container{
+    max-width: 854px;
+    margin-bottom: 100px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 120%;
+    color: #000066;
+    margin-bottom: 11px;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7373BA;
+    margin-bottom: 26px;
+  }
+  &__content{
+    margin-bottom: 70px;
+    .tns-outer{
+      position: relative;
+      .tns-controls{
+        button{
+          &:first-child{
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+          &:last-child{
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translate(0, -50%);
+
+          }
+        }
+      }
+    }
+    p{
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 140%;
+      color: #000000;
+      margin-bottom: 22px;
+      &:first-child{
+        font-weight: 500;
+      }
+      &.separate{
+        margin-top: 32px;
+        background: rgba(#F6F6FF, .5);
+        display: block;
+        padding: 25px;
+        margin-bottom: 32px;
+      }
+    }
+    .about-team-slider-thumbnails-wrap{
+      margin-bottom: 30px;
+    }
+  }
+  .case-reviews-slider{
+    &__item{
+      &__wrap{
+        display: flex;
+        flex-direction: column;
+        padding: 35px 40px 36px 40px;
+        background: #FFFFFF;
+        border: 1px solid #DEDEF4;
+        min-height: 490px;
+        text-decoration: none;
+      }
+      &__top{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 120%;
+        color: #000066;
+        margin-bottom: 15px;
+      }
+      &__image{
+        height: 65px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      &__description{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 140%;
+        color: #000000;
+        margin-bottom: 18px;
+      }
+      &__bottom{
+        max-width: 376px;
+        .title{
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 140%;
+          color: #000000;
+
+        }
+        .value{
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 140%;
+          /* or 21px */
+
+
+          color: #000000;
+
+        }
+      }
+    }
+    &__control{
+      margin-top: 30px;
+      .btn{
+        &:first-child{
+          margin-right: 9px;
+        }
+        &:nth-child(2){
+          margin-right: 9px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .case-page{
+    .text-container{
+      margin-bottom: 80px;
+    }
+    &__title{
+      font-size: 32px;
+      margin-bottom: 11px;
+    }
+    &__subtitle{
+      font-size: 11px;
+      margin-bottom: 30px;
+    }
+    &__content{
+      margin-bottom: 50px;
+      p{
+        font-size: 15px;
+        line-height: 140%;
+        margin-bottom: 15px;
+        &:first-child{
+          margin-bottom: 23px;
+        }
+        &.separate{
+          margin-bottom: 30px;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+      .about-team-slider{
+        margin-top: 10px;
+      }
+      .about-team-slider-thumbnails-wrap{
+        margin-top: 16px;
+      }
+    }
+    .case-reviews-slider{
+      &__item{
+        &__wrap{
+          min-height: unset;
+          padding-bottom: 38px;
+        }
+        &__top{
+          font-size: 20px;
+          line-height: 120%;
+          margin-bottom: 10px;
+        }
+        &__image{
+          margin-bottom: 15px;
+        }
+        &__description{
+          font-size: 13px;
+          line-height: 140%;
+          margin-bottom: 18px;
+        }
+        &__bottom{
+          max-width: 376px;
+          .title{
+            font-size: 15px;
+            line-height: 140%;
+
+          }
+          .value{
+            font-size: 13px;
+            line-height: 140%;
+
+          }
+        }
+      }
+      &__control{
+        margin-top: 30px;
+        .btn{
+          &:first-child{
+            margin-right: 9px;
+          }
+          &:nth-child(2){
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .case-page{
+    .about-team-slider-thumbnails{
+      li{
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+        height: 47px;
+        margin-right: 13px;
+      }
+    }
+    .text-container{
+      margin-bottom: 80px;
+    }
+    &__title{
+      font-size: 25px;
+      line-height: 120%;
+    }
+    &__subtitle{
+      font-size: 11px;
+      margin-bottom: 17px;
+    }
+    &__content{
+      margin-bottom: 50px;
+      p{
+        font-size: 15px;
+        line-height: 140%;
+        margin-bottom: 15px;
+        &:first-child{
+        }
+        &.separate{
+          padding: 20px;
+        }
+      }
+      .about-team-slider{
+        margin-top: 0px;
+      }
+      .about-team-slider-thumbnails-wrap{
+        margin-top: 14px;
+        margin-bottom: 22px;
+      }
+    }
+    .case-reviews-slider{
+      &__item{
+        &__wrap{
+          min-height: 448px;
+          padding-bottom: 0;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-bottom: 32px;
+          padding-top: 35px;
+        }
+        &__top{
+          font-size: 20px;
+          line-height: 120%;
+        }
+        &__image{
+          margin-bottom: 15px;
+        }
+        &__description{
+          font-size: 13px;
+          line-height: 140%;
+          margin-bottom: 18px;
+        }
+        &__bottom{
+          max-width: 376px;
+          .title{
+            font-size: 15px;
+            line-height: 140%;
+
+          }
+          .value{
+            font-size: 13px;
+            line-height: 140%;
+
+          }
+        }
+      }
+      &__control{
+        margin-top: 30px;
+        .btn{
+          &:first-child{
+            margin-right: 9px;
+          }
+          &:nth-child(2){
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+  }
+}

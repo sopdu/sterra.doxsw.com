@@ -1,0 +1,55 @@
+.slider-filters {
+  display: flex;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 500;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: var(--space-unit);
+    }
+
+    .slider-filter {
+      @include button;
+      background: transparent;
+      color: var(--primary);
+      transition: color 250ms linear;
+
+      &:hover {
+        color: var(--primary-dark);
+      }
+
+      &.active {
+        color: var(--accent);
+        cursor: default;
+
+        &:hover {
+          color: var(--accent);
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: var(--space-xs);
+          background: currentColor;
+        }
+      }
+    }
+  }
+
+  @include lg-tablet-up {
+    font-size: 17px;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: calc(2 * var(--space-unit));
+      }
+    }
+  }
+}

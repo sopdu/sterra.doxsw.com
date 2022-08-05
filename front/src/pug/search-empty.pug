@@ -1,0 +1,19 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page.fix-100-vh
+        include components/header/index.pug
+        .search-page.page-main
+            +breadcrumb(['Главная '], ' / Поиск')
+            .container
+                .text-container
+                    .search-field.js-input-search-field
+                        .search-field__icon
+                            +svg-icon('search', 14, 14)
+                        input.js-input-search.form-control(value="" placeholder='Поиск по названию' name="q" data-field autocomplete="off")
+                        button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                    .search-page__info  Найдено: 0
+                    .search-page__info  К сожалению, на ваш поисковый запрос ничего не найдено.
+
+        include components/footer/index.pug

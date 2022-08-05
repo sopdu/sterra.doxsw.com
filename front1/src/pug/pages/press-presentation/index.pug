@@ -1,0 +1,40 @@
+include  ../../data/presspresentation
+
+block content
+    .container
+        .presspresentation-page__content(data-full-length="1021" data-page-size="12" data-action="./backend/presspresentation.json" data-method="GET")
+            .presspresentation-page__content__top
+                .presspresentation-page__title Маркетинговые материалы
+                ul.presspresentation-page__filter
+                    li.js-control-item.presspresentation-page__filter__item
+                        button.js-control-item-button.presspresentation-page__filter__button.active(type="button" data-type="1") Презентация
+                    li.js-control-item.presspresentation-page__filter__item
+                        button.js-control-item-button.presspresentation-page__filter__button(type="button" data-type="2") Печатные материалы
+                    li.js-control-item.presspresentation-page__filter__item
+                        button.js-control-item-button.presspresentation-page__filter__button(type="button" data-type="3") Корпоративный стиль
+
+            .presspresentation-page__content__button
+                button.btn.btn-primary-inverse.btn-lg.m-b
+                    .btn-icon
+                        +svg-icon('upload-item')
+                    |Скачать все материалы ZIP
+
+            .presspresentation-page__body.row
+                each item in presspresentation
+                    .col.col-12.col-sm-12.col-md-6
+                        a.presspresentation-page__item(href="#")
+                            .presspresentation-page__image 
+                                img.presspresentation-page__item__image(src=item.img)
+                            .presspresentation-page__content
+                                .presspresentation-page__item__title= item.title
+                                .presspresentation-page__item__date= item.date
+                                button.btn.btn-primary-inverse.btn-lg.m-b
+                                    .btn-icon
+                                        +svg-icon('upload-item', 22, 18)
+                                    |Скачать PDF
+
+            .presspresentation-page__controll
+                .presspresentation-page__controll__text.js-control-text Показано 12 из 1021
+                button.js-control-more.presspresentation-page__controll__btn.btn.btn-primary-inverse Еще 12
+
+                

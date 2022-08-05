@@ -1,0 +1,16 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .press-actual-item
+            main.page-main
+
+            +breadcrumb(['Главная ', ' / Пресс-центр — Объявления'], ' / Изменение прайс-листа 16.02.2021')
+
+            include pages/press-actual-item/index
+
+        include components/footer/index.pug

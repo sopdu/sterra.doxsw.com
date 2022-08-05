@@ -1,0 +1,49 @@
+
+include ../../data/support-documentation-1
+.support-documentation-tab-1
+    .support-documentation-tab-1__top
+        .support-documentation-tab-1__top__selects
+
+            .custom-select
+                select
+                    option(value="0") Выбор версии
+                    option 123
+                    option 123
+                    option 123
+            .custom-select
+                select
+                    option(value="0") Версия
+                    option 123
+                    option 123
+                    option 123
+            .custom-select
+                select
+                    option(value="0") Кем выдан
+                    option 123
+                    option 123
+                    option 123
+
+
+        a.btn.btn-primary-inverse(href="#")
+            svg.btn-icon.desktop
+                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+            svg.btn-icon.mobile
+                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+            span Скачать все сертификаты
+    .support-documentation-tab-1__content
+        for item in supportDocumentation1
+            .support-documentation-tab-1__item
+                .support-documentation-tab-1__item__image
+                    img(src=item.image)
+                .support-documentation-tab-1__item__text
+                    .support-documentation-tab-1__item__text__title !{item.title}
+                    ul
+                        for li in item.list
+                            li !{li}
+
+                    button.btn.btn-primary-inverse
+                        svg.btn-icon.desktop
+                            use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                        svg.btn-icon.mobile
+                            use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                        span Скачать PDF

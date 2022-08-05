@@ -1,0 +1,43 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+
+block content
+    .page
+        include components/header/index.pug
+        .contacts-page.page-main
+            +breadcrumb(['Главная '], ' / Контакты')
+            include pages/contacts/main
+            include pages/catalog-compl/form/index
+            include pages/contacts/form
+
+        include components/footer/index.pug
+    | <script type="text/javascript">
+    | ymaps.ready(init);
+    |     function init(){
+    |         // Создание карты.
+    |         var myMap = new ymaps.Map("map", {
+    |             center: [56.007514, 37.156934],
+    | controls: ["zoomControl"],
+    | zoom: 16,
+    |
+    | });
+    | myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    | hintContent: 'S-terra',
+    | balloonContent: 'S-terra'
+    | }, {
+    | // Опции.
+    | // Необходимо указать данный тип макета.
+    | iconLayout: 'default#image',
+    | // Своё изображение иконки метки.
+    | iconImageHref: 'img/contacts/pin.png',
+    | // Размеры метки.
+    | iconImageSize: [40, 48],
+    | // Смещение левого верхнего угла иконки относительно
+    | // её "ножки" (точки привязки).
+    | iconImageOffset: [-30, -30 ]
+    | }),
+    | myMap.geoObjects
+    |     .add(myPlacemark)
+    | }
+    | </script>

@@ -1,0 +1,36 @@
+@import "jumbotron/index";
+@import "description";
+@import "faq";
+.complex-card-page{
+  .breadcrumb__list{
+    padding-bottom: 48px;
+  }
+  .home-contact-form{
+    margin-top: 103px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 1020px){
+  .complex-card-page{
+    .breadcrumb__list{
+      padding-bottom: 35px;
+    }
+
+    .home-contact-form{
+      margin-top: 78px;
+      margin-bottom: 80px;
+    }
+  }
+}
+@media (max-width: 767px){
+  .complex-card-page{
+    .breadcrumb__list{
+      padding-bottom: 25px;
+    }
+
+    .home-contact-form{
+      margin-top: 75px;
+      margin-bottom: 80px;
+    }
+  }
+}

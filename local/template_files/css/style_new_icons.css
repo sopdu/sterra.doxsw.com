@@ -1,0 +1,25 @@
+div.zaprosZayvki {
+	width: 140px;
+	margin-bottom: 35px;
+}
+.zaprosZayvki a {
+	display: block;
+	width: 140px;
+	height: 20px;
+	padding: 6px 16px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 20px!important; 
+	text-decoration: none!important;
+	color: #fff!important;
+	margin: 20px 0px;
+	background: linear-gradient(180deg, #f31010 20%, #ad2626 100%), #e42d24; 
+	border-radius: 0px;
+	margin: 25px 0px 5px 0px;
+	transition: ease .5s;
+}
+.zaprosZayvki:hover a {
+	background: linear-gradient(180deg, #f31010 20%, #731818 100%), #e42d24;
+	border-radius: 20px;
+	transition: ease .5s;
+}

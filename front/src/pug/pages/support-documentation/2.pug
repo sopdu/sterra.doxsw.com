@@ -1,0 +1,53 @@
+
+include ../../data/support-documentation-2
+.support-documentation-tab-2
+    .support-documentation-tab-2__top
+        a.btn.btn-primary-inverse(href="#")
+            svg.btn-icon.desktop
+                use(href="./img/icons/icon-sprite.svg#download-arrow")
+            svg.btn-icon.mobile
+                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+            span Скачать все ZIP
+
+    .support-documentation-tab-2__content
+        for item in supportDocumentation2
+            if item.open
+                .support-documentation-tab-2__item.open
+                    .support-documentation-tab-2__item__wrap
+                        .support-documentation-tab-2__item__close
+                            +svg-icon('close-custom', 20, 20)
+                        .support-documentation-tab-2__item__image
+                            img(src=item.image)
+                        .support-documentation-tab-2__item__text
+                            .support-documentation-tab-2__item__text__title= item.title
+                            .support-documentation-tab-2__item__text__subtitle= item.period
+                            .support-documentation-tab-2__item__text__description !{item.description}
+                            if item.extra
+                                .support-documentation-tab-2__item__text__extra !{item.extra}
+
+                            a.btn.btn-primary-inverse(href="#")
+                                svg.btn-icon.desktop
+                                    use(href="./img/icons/icon-sprite.svg#download-arrow")
+                                svg.btn-icon.mobile
+                                    use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                                span Скачать PDF
+            else
+                .support-documentation-tab-2__item
+                    .support-documentation-tab-2__item__wrap
+                        .support-documentation-tab-2__item__close
+                            +svg-icon('close-custom', 20, 20)
+                        .support-documentation-tab-2__item__image
+                            img(src=item.image)
+                        .support-documentation-tab-2__item__text
+                            .support-documentation-tab-2__item__text__title= item.title
+                            .support-documentation-tab-2__item__text__subtitle= item.period
+                            .support-documentation-tab-2__item__text__description !{item.description}
+                            if item.extra
+                                .support-documentation-tab-2__item__text__extra !{item.extra}
+
+                            a.btn.btn-primary-inverse(href="#")
+                                svg.btn-icon.desktop
+                                    use(href="./img/icons/icon-sprite.svg#download-arrow")
+                                svg.btn-icon.mobile
+                                    use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                                span Скачать PDF

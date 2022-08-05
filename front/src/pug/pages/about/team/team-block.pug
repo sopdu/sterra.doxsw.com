@@ -1,0 +1,54 @@
+
+include  ../../../data/team-users
+block content
+    section.about-team
+        .container.tab
+            header.about-team__header
+                h2.h1.about-team__title Наша команда
+                ul.tab-head
+                    li.tab-head__item(data-type="lead")
+                        button.tab-head__button.active(type="button") Руководство
+                    li.tab-head__item(data-type="all")
+                        button.tab-head__button(type="button") Все
+            .tab-body
+                .tab-body__item.active( data-type="lead")
+                    .about-team__users
+
+                        each user in teamusers
+                            .about-team-user
+                                .about-team-user__image
+                                    img(src=user.image alt="")
+                                .about-team-user__name= user.name
+                                .about-team-user__position= user.position
+
+                .tab-body__item(type="button" data-type="all")
+                    .about-team-slider
+                        .slider__item
+                            img(src="./img/about/about-team-slider.png")
+                        .slider__item
+                            img(src="./img/about/about-team-slider.png")
+                        .slider__item
+                            img(src="./img/about/about-team-slider.png")
+                        .slider__item
+                            img(src="./img/about/about-team-slider.png")
+                        .slider__item
+                            img(src="./img/about/about-team-slider.png")
+                        .slider__item
+                            img(src="./img/about/about-team-slider.png")
+
+                    .about-team-slider-thumbnails-wrap
+                        ul#about-team-slider-thumbnails.about-team-slider-thumbnails
+                            li
+                                img(src="./img/about/about-team-slider-thumb.png")
+                            li
+                                img(src="./img/about/about-team-slider-thumb.png")
+                            li
+                                img(src="./img/about/about-team-slider-thumb.png")
+                            li
+                                img(src="./img/about/about-team-slider-thumb.png")
+                            li
+                                img(src="./img/about/about-team-slider-thumb.png")
+                            li
+                                img(src="./img/about/about-team-slider-thumb.png")
+
+

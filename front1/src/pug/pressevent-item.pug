@@ -1,0 +1,15 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .press-event-item
+            main.page-main
+
+            +breadcrumb(['Главная ', ' / Пресс-центр — Мероприятия'], ' / Практическая конференция «ИТ-Полигон — 2021»')
+            include pages/press-event-item/index
+
+        include components/footer/index.pug

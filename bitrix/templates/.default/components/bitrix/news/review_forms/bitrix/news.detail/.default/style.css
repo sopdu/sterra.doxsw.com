@@ -1,0 +1,42 @@
+div.news-detail {
+	word-wrap: break-word;
+}
+
+div.news-detail img.detail_picture {
+    float:left;
+    margin:0 8px 6px 1px;
+}
+.news-date-time {
+    color:#486DAA;
+}
+
+.pageform p {
+	color: #535353;
+	font-size: 12px;
+	text-align: center;
+	padding: 0px 0px 15px 0px;
+	line-height: 18px;
+	max-width: 600px;
+	margin-top: 40px;
+}
+
+.pageform h3 {
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.pageform h5 {
+	max-width: 600px;
+	line-height: 18px;
+}
+
+.label-1-10 {
+padding-left: 10px;
+display: inline-block;
+width: 195px;
+}
+
+.short_input {
+ width: 30px !important;
+}

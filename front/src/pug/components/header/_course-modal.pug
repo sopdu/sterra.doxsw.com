@@ -1,0 +1,46 @@
+<!-- Course FORM -->
+
+include ../../mixins/modal.pug
++modal('course-modal')
+    h2.modal-title Оформление заявки
+    .modal-subtitle Все поля обязательны для заполнения
+
+    form#course-modal-form.course-modal-form(action="./backend/question-form.json" method="GET")
+        .form-field
+            label.form-label(for="question-name") ФИО
+            input#question-name.form-control(name="name")
+        .form-field
+            label.form-label(for="question-company") Название компании
+            input#question-company.form-control(name="company")
+        .form-field
+            label.form-label(for="question-company") Занимаемая должность
+            input#question-position.form-control(name="position")
+        .row
+            .col.col-12.col-sm-6
+                .form-field
+                    label.form-label(for="question-mail") Электронная почта*
+                    input#question-mail.form-control(name="email" inputmode="email")
+            .col.col-12.col-sm-6
+                .form-field
+                    label.form-label(for="question-phone") Номер телефона
+                    input#question-phone.form-control(data-mask="phone" inputmode="number" name="phone" placeholder="+7 (___) ___-__-__")
+        .form-field
+            label.form-label(for="question-company") Номер лицензии
+            input#question-license.form-control(name="license")
+        .form-field
+            label.form-label(for="question-text") Текст обращения
+            textarea#question-text.form-control(name="question")
+        .form-field.course-modal-form__confirm
+            label.checkbox
+                input#question-agreement(type="checkbox" name="agreement")
+                span.checkbox-box
+                .checkbox-label Даю согласие на обработку своих персональных данных в соответствии с #[a(href="#") Политикой обработки персональных данных ООО «С-Терра СиЭсПи»].
+
+        .form-field.course-modal-form__confirm
+            label.checkbox
+                input#question-agreement-support(type="checkbox" name="support")
+                span.checkbox-box
+                .checkbox-label Я ознакомлен и согласен с #[a(href="#") условиями технической поддержки].
+        button.btn.btn-primary.btn-block(type="submit") Отправить
+
+<!-- /Course FORM -->

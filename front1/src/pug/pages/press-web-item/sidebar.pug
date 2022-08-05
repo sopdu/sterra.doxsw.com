@@ -1,0 +1,12 @@
+include  ../../data/presswebitem
+ 
+.col.col-12.pressweb-item-page__item__title Другие вебинары
+.row
+    each item in presswebitem
+        .col.col-12.col-sm-6.col-md-12
+            a.pressweb-page__item(href="#")
+                img.pressweb-page__item__image(src=item.img)
+                .pressweb-page__item__date= item.date
+                .pressweb-page__item__title= item.title
+
+a.btn.btn-primary-inverse.btn-round(href="#") Все вебинары

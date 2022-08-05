@@ -1,0 +1,15 @@
+mixin select-box(name, options)
+    .select-box
+        .select-box__current(tabindex="1")
+            each option, index in options
+                .select-box__value
+                    input.select-box__input(type="radio" id=index value=option.value name=name checked=option.checked)
+                    p.select-box__input-text #{option.name}
+            .select-box__icon
+                +svg-icon('arrow', 12, 7)
+        ul.select-box__list
+            each option, index in options
+                li
+                    label.select-box__option(for=index aria-hidden)
+                        span #{option.name}
+

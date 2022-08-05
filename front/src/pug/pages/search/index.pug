@@ -1,0 +1,20 @@
+include ../../data/search
+block content
+
+    .container
+        .text-container
+            .search-field.js-input-search-field
+                .search-field__icon
+                    +svg-icon('search', 14, 14)
+                input.js-input-search.form-control(value="" placeholder='Поиск по названию' name="q" data-field autocomplete="off")
+                button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                    +svg-icon('times', 10, 10)
+            .search-page__info  Найдено: 304
+            .search-page__items
+                for item in searchitems
+                    .search-page__item
+                        .search-page__item__title !{item.title}
+                        .search-page__item__description !{item.description}
+            .vacancies-vacant__controll.js-control-main-search
+                .vacancies-vacant__controll__text.js-control-text-search Показано 6 из 9
+                button.js-control-more-search.vacancies-vacant__controll__btn.btn.btn-primary-inverse Еще 3

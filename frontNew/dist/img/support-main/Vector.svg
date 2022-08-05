@@ -1,0 +1,20 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#E5E5E5"/>
+<g id="support">
+<g id="st-support" clip-path="url(#clip0_202_274)">
+<rect width="1440" height="3731" transform="translate(-109 -375)" fill="white"/>
+<g id="banner">
+<path id="Vector" d="M1331 -295H-109V155H1331V-295Z" fill="#1E1D85"/>
+<g id="button enter">
+<rect id="Rectangle 2030" x="-39" y="-15" width="343" height="54" rx="27" fill="#E42D24"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M12 11C14.7614 11 17 8.76143 17 6C17 3.23857 14.7614 1 12 1C9.23862 1 7 3.23857 7 6C7 8.76143 9.23862 11 12 11Z" stroke="white" stroke-width="2"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_202_274">
+<rect width="1440" height="3731" fill="white" transform="translate(-109 -375)"/>
+</clipPath>
+</defs>
+</svg>

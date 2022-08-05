@@ -1,0 +1,67 @@
+include  ../../data/pressnews
+
+block content
+    .container
+        .pressnews-page__content(data-full-length="1021" data-page-size="12" data-action="./backend/pressnews.json" data-method="GET")
+            .pressnews-page__content__top
+                .pressnews-page__title Пресс-центр
+                ul.pressnews-page__filter
+                    li.js-control-item.pressnews-page__filter__item
+                        button.js-control-item-button.pressnews-page__filter__button.active(type="button" data-type="1") Новости
+                    li.js-control-item.pressnews-page__filter__item
+                        button.js-control-item-button.pressnews-page__filter__button(type="button" data-type="2") Объявления
+                    li.js-control-item.pressnews-page__filter__item
+                        button.js-control-item-button.pressnews-page__filter__button(type="button" data-type="3") Мероприятия
+                    li.js-control-item.pressnews-page__filter__item
+                        button.js-control-item-button.pressnews-page__filter__button(type="button" data-type="4") Вебинары
+                    li.js-control-item.pressnews-page__filter__item
+                        button.js-control-item-button.pressnews-page__filter__button(type="button" data-type="5") Публикации
+
+            .pressnews-page__content__button.row.justify-content-between
+                .pressnews-page__select.col.col-12.col-sm-4.col-md-3
+                    .pressnews-page__selected 
+                        .pressnews-page__active За все время
+                        .controlls
+                            button.btn-primary-inverse.close
+                                +svg-icon('times', 10, 10)
+                            button.btn-primary-inverse
+                                +svg-icon('chevron-right', 10, 10)
+                    ul.pressnews-page__selects 
+                        li.js-control-item.pressnews-page__select__item
+                            button.js-control-item.pressnews-page__select_button(type="button" data-type="1") За все время
+                        li.js-control-item.pressnews-page__select__item
+                            button.js-control-item.pressnews-page__select_button(type="button" data-type="1") За все время 2
+                        li.js-control-item.pressnews-page__select__item
+                            button.js-control-item.pressnews-page__select_button(type="button" data-type="1") За все время 3
+                        li.js-control-item.pressnews-page__select__item
+                            button.js-control-item.pressnews-page__select_button(type="button" data-type="1") За все время 4
+
+                .pressnews-page__search.col.col-12.col-sm-7.col-md-8
+                        .search-field.js-input-search-field
+                            .search-field__icon
+                                +svg-icon('search', 14, 14)
+                            input.js-input-search.form-control(value="" placeholder='Поиск' name="q" data-field autocomplete="off")
+                            button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                                +svg-icon('times', 10, 10)
+
+                        ul.search-list(data-list hidden)
+
+            .pressnews-page__body.row
+                each item in pressnews
+                    .col.col-12.col-sm-6.col-md-3
+                        a.pressnews-page__item(href="#")
+                            img.pressnews-page__item__image(src=item.img)
+                            .pressnews-page__item__date= item.date
+                            .pressnews-page__item__title= item.title
+                            .pressnews-page__item__text= item.text
+
+            .pressnews-page__controll
+                .pressnews-page__controll__text.js-control-text Показано 12 из 1021
+                button.js-control-more.pressnews-page__controll__btn.btn.btn-primary-inverse Еще 12
+
+            .pressnews-page__contacts
+                .pressnews-page__contacts__title Контакты отдела PR и рекламы
+                a.pressnews-page__contacts__phone-link(href="tel:+7 (499) 940-90-01") +7 (499) 940-90-01
+                a.pressnews-page__contacts__email-link(href="mailto:information@s-terra.ru") information@s-terra.ru
+
+                

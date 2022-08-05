@@ -1,0 +1,41 @@
+extends helpers/layout.pug
+
+block append head
+  style(type="text/css").
+
+
+block content
+  include mixins/icon.pug
+
+  .container
+    h1.m-b UI Kit
+
+    .m-b
+      a(href="#")
+        img(src="./img/logo.png")
+
+    .m-b
+      .apps.colored
+        ul.apps-list
+          li
+            a.app-icon.app-icon-wa(href="#" target="_blank" rel="noopener noreferrer nofollow")
+          li
+            a.app-icon.app-icon-tg(href="#" target="_blank" rel="noopener noreferrer nofollow")
+          li
+            a.app-icon.app-icon-fb(href="#" target="_blank" rel="noopener noreferrer nofollow")
+          li
+            a.app-icon.app-icon-yt(href="#" target="_blank" rel="noopener noreferrer nofollow")
+          li
+            a.app-icon.app-icon-vk(href="#" target="_blank" rel="noopener noreferrer nofollow")
+          li
+            a.app-icon.app-icon-in(href="#" target="_blank" rel="noopener noreferrer nofollow")
+
+    ul(style="list-style: none")
+      li
+        a(href="./ui-kit-base.html") Основное
+      li
+        a(href="./ui-kit-grid.html") Сетка
+      li
+        a(href="./ui-kit-header.html") Шапка
+      li
+        a(href="./ui-kit-slider.html") Слайдер

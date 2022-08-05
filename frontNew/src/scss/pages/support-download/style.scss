@@ -1,0 +1,84 @@
+.support-download-page{
+  margin-bottom: 100px;
+  .breadcrumb__list{
+    padding-bottom: 44px;
+  }
+  .support-download{
+    &__title{
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 110%;
+      color: #000066;
+      margin-bottom: 35px;
+    }
+    &__wrap{
+      max-width: 852px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__item{
+      padding-top: 22px;
+      padding-bottom: 29px;
+      border-bottom: 1px solid #DEDEF4;
+      &:first-child{
+        border-top: 1px solid #DEDEF4;
+      }
+      &__title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000066;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px){
+  .support-download-page{
+    margin-bottom: 171px;
+    .breadcrumb__list{
+      padding-bottom: 33px;
+    }
+    .support-download{
+      &__title{
+        font-size: 32px;
+        line-height: 120%;
+        margin-bottom: 33px;
+      }
+      &__wrap{
+      }
+      &__item{
+        &:first-child{
+        }
+        &__title{
+          font-size: 15px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .support-download-page{
+    margin-bottom: 80px;
+    .breadcrumb__list{
+      padding-bottom: 31px;
+    }
+    .support-download{
+      &__title{
+        font-size: 25px;
+        line-height: 120%;
+      }
+      &__wrap{
+      }
+      &__item{
+        &:first-child{
+        }
+        &__title{
+          margin-bottom: 26px;
+        }
+      }
+    }
+  }
+}

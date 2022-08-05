@@ -1,0 +1,55 @@
+$minContentWidth: 360px;
+$maxContentWidth: 1380px;
+
+@mixin lg-phone-up {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+@mixin lg-phone-up-max {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-up-max {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin lg-tablet-up {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin lg-tablet-up-max {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin sm-desktop-up {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin max-width-up {
+  @media (min-width: 1360px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

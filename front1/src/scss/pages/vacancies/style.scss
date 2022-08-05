@@ -1,0 +1,32 @@
+@import "jumbotron";
+@import "vacant";
+@import "review";
+@import "work";
+
+
+.vacancies-page{
+  .vacancies-vacant{
+    margin-bottom: 100px;
+  }
+  .vacancies-review{
+    margin-bottom: 100px;
+  }
+  .vacancies-work{
+    margin-bottom: 100px;
+  }
+  @include lg-tablet-up-max(){
+    .vacancies-vacant{
+      margin-bottom: 80px;
+    }
+    .vacancies-review{
+      margin-bottom: 80px;
+    }
+    .vacancies-work{
+      margin-bottom: 80px;
+    }
+  }
+  @include tablet-up-max(){
+  }
+  @include lg-phone-up-max(){
+  }
+}

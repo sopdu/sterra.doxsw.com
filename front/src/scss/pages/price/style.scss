@@ -1,0 +1,25 @@
+@import "price-main";
+@import "price-slider";
+@import "price-structure";
+
+.price-page{
+  .breadcrumb__list{
+    padding-bottom: 42px;
+  }
+}
+@media (max-width: 1020px){
+
+  .price-page{
+    .breadcrumb__list{
+      padding-bottom: 34px;
+    }
+  }
+}
+@media (max-width: 767px){
+
+  .price-page{
+    .breadcrumb__list{
+      padding-bottom: 23px;
+    }
+  }
+}

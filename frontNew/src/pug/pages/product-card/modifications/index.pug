@@ -1,0 +1,34 @@
+
+include ../../../data/product-modification
+
+block content
+    .product-card-modification
+        .container
+            .product-card-modification__title Модификации
+            .product-card-modification__block
+                each item in modifications
+                    .product-card-modification__item
+                        .product-card-modification__item-wrap
+                            .product-card-modification__item-image
+                                img(src=item.image alt="#")
+                            .product-card-modification__item-text
+                                .product-card-modification__item-text__title= item.title
+                                if item.subtitle
+                                    .product-card-modification__item-text__subtitle= item.subtitle
+                                .product-card-modification__item-text__description= item.description
+                                if item.extra
+                                    .product-card-modification__item-text__extra= item.extra
+                                .product-card-modification__item-text__blocks
+                                    each block in item.blocks
+                                        .product-card-modification__item-text__block
+                                            .product-card-modification__item-text__block__title= block.title
+                                                if block.icon
+                                                    +svg-icon('exclamation-point', 14, 14)
+                                            .product-card-modification__item-text__block__value= block.value
+            .product-card-modification__buttons
+                button.btn.btn-primary-inverse.btn-round(data-controls="prev")
+                    +svg-icon('chevron-left', 7, 12)
+                button.btn.btn-primary-inverse.btn-round(data-controls="next")
+                    +svg-icon('chevron-right', 7, 12)
+                button.btn.btn-primary-inverse.btn-dekstop Смотреть документацию по установке
+                button.btn.btn-primary-inverse.btn-mobile Документация по установке

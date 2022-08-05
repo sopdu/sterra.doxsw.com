@@ -1,0 +1,28 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .about-page
+            main.page-main
+
+                .bg-block
+                    .about-page__jumbotron
+                        include pages/about/jumbotron/index.pug
+
+            +breadcrumb(['Главная ', ' / Второй порядок'], ' / О компании ')
+
+            include pages/about/superior/block
+
+            include pages/about/company_mission
+
+            include pages/about/history/history
+
+            include pages/about/team/team-block
+
+            include pages/about/work-with-us
+
+        include components/footer/index.pug

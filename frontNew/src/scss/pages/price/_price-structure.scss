@@ -1,0 +1,226 @@
+.price-structure{
+  margin-bottom: 100px;
+  &__title{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    color: #000066;
+    margin-bottom: 30px;
+  }
+  &-table{
+    display: grid;
+    grid-template-columns: 33% 33.3% 1fr;
+    margin-bottom: 35px;
+    &__col{
+      padding: 30px;
+      .btn{
+        margin-top: 15px;
+      }
+      &__border{
+        border-top: 1px solid #DEDEF4;
+        border-bottom: 1px solid #DEDEF4;
+        border-right: 1px solid #DEDEF4;
+        &:first-child{
+          border-left: 1px solid #DEDEF4;
+        }
+      }
+      &__title{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 140%;
+        color: #000066;
+      }
+      &__subtitle{
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 140%;
+        color: #000000;
+      }
+      ul{
+        list-style: none;
+        padding-left: 0;
+        flex-grow: 1;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        li{
+          padding-left: 21px;
+          position: relative;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 140%;
+          color: var(--black);
+          margin-bottom: 7px;
+          &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            display: block;
+            background-color: var(--red);
+            border-radius: 100%;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      small{
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 140%;
+      }
+    }
+  }
+  &__text{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+    color: #000000;
+    max-width: 745px;
+    p{
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .phone-link{
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .email-link{
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px){
+  .price-structure{
+    margin-bottom: 76px;
+    &__title{
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 37px;
+    }
+    &-table{
+      margin-bottom: 0;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: 'a b'
+                            'c c';
+      &__col{
+        padding-left: 20px;
+        padding-right: 20px;
+        &:nth-child(1){
+          grid-area: a;
+        }
+        &:nth-child(2){
+          grid-area: b;
+        }
+        &:nth-child(3){
+          grid-area: c;
+          padding-left: 0;
+          padding-bottom: 24px;
+          padding-top: 24px;
+        }
+        .btn{
+          margin-top: 21px;
+        }
+        &__border{
+        }
+        &__title{
+          font-size: 15px;
+          line-height: 140%;
+        }
+        &__subtitle{
+          font-size: 13px;
+          line-height: 140%;
+        }
+        ul{
+          margin-top: 11px;
+          li{
+            font-size: 13px;
+            line-height: 140%;
+            &::after{
+              top: 6px;
+            }
+            &:last-child{
+            }
+          }
+        }
+        small{
+          font-size: 11px;
+          line-height: 120%;
+        }
+      }
+    }
+    &__text{
+      p{
+        font-size: 13px;
+        line-height: 140%;
+        &:last-child{
+        }
+        .phone-link{
+        }
+        .email-link{
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .price-structure{
+    &__title{
+      margin-bottom: 23px;
+    }
+    &-table{
+      grid-template-columns: 100%;
+      grid-template-areas: 'a '
+                            'b '
+                            'c ';
+      &__col{
+        padding-top: 22px;
+        padding-bottom: 24px;
+        .btn{
+        }
+        &__border{
+          border-top: unset;
+          border-bottom: 1px solid #DEDEF4;
+          border-right: 1px solid #DEDEF4;
+          border-left: 1px solid #DEDEF4;
+          &:first-child{
+            border-top: 1px solid #DEDEF4;
+          }
+        }
+        &__title{
+        }
+        &__subtitle{
+        }
+        ul{
+          margin-bottom: 11px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          li{
+            &::after{
+            }
+            &:last-child{
+            }
+          }
+        }
+        small{
+        }
+      }
+    }
+    &__text{
+      p{
+        &:last-child{
+        }
+        .phone-link{
+        }
+        .email-link{
+        }
+      }
+    }
+  }
+}

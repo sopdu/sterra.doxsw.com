@@ -1,0 +1,43 @@
+@import "vacancy-main";
+@import "vacancy-sidebar";
+@import "vacancy-form";
+
+.vacancy-page{
+  .breadcrumb__list{
+    margin-top: var(--header-height);
+    padding-bottom: 40px;
+  }
+  .vacancy-page-content{
+    margin-bottom: 100px;
+  }
+
+  @include lg-tablet-up-max(){
+    .vacancy-page-content{
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.content-with-sidebar{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  .sidebar{
+    position: sticky;
+    top: calc(10px + var(--header-height));
+    align-self: flex-start;
+  }
+
+  @include lg-tablet-up-max(){
+    .sidebar{
+      position: relative;
+      top: unset;
+      margin-top: 80px;
+    }
+  }
+}
+
+@include tablet-up-max(){
+}
+@include lg-phone-up-max(){
+}

@@ -1,0 +1,93 @@
+
+include  ../../../data/support-items
+
+
+section.home-faq.support-main-accordion
+    .container
+        .support-main-accordion__title Гарантийное обслуживание
+        .support-main-accordion__subtitle Обращаем ваше внимание, что данная информация является справочной. Актуальность информации и условия гарантийного обслуживания уточняйте у производителей аппаратных платформ
+        .home-faq__accordion
+
+
+            div.accordion#home-faq
+                section.home-faq-item.accordion-item
+                    header.home-faq-item__header.accordion-item-header.accordion-trigger
+                        h2.home-faq-item__title Порядок работы с неисправным оборудованием, находящимся на гарантийном обслуживании производителя
+                        .home-faq-item__state
+                    .accordion-item-panel
+                        .home-faq-item__content
+                            ul
+                                li В случае обнаружения аппаратного сбоя, обратитесь в службу технической поддержки ООО «С-Терра СиЭсПи».
+                            button.btn.btn-primary(data-ask-question) Написать в поддержку
+                            ul
+                                li В случае подтверждения технического сбоя аппаратной платформы и АПМДЗ службой технической поддержки ООО «С-Терра СиЭсПи» (удалённая диагностика), рекомендуем обращаться в сервисные центры производителей аппаратных платформ и АПМДЗ:
+
+                            .search-field.js-input-search-field
+                                .search-field__icon
+                                    +svg-icon('search', 14, 14)
+                                input.js-input-search.form-control(value="" placeholder='Поиск по названию производителя' name="q" data-field autocomplete="off")
+                                //button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                                //    +svg-icon('times', 10, 10)
+                            .support-main-accordion-item-wrap
+                                each item in supportItems
+                                    .support-main-accordion-item
+                                        .support-main-accordion-item__text
+                                            .support-main-accordion-item__text__title= item.title
+                                            .support-main-accordion-item__text__description !{item.description}
+                                        if item.contacts
+                                            .support-main-accordion-item__contacts
+                                                a.support-main-accordion-item__contacts__phone(href="#")
+                                                    svg.support-main-accordion-item__contacts__phone__icon
+                                                        use(href="./img/icons/icon-sprite.svg#phone-icon")
+                                                    span !{item.phone}
+                                                a.support-main-accordion-item__contacts__email(href="#")
+                                                    svg.support-main-accordion-item__contacts__email__icon
+                                                        use(href="./img/icons/icon-sprite.svg#mail-icon")
+                                                    span !{item.email}
+
+
+
+
+                            small При отсутствии сервисного центра в регионе, либо в силу других причин при согласовании со службой технической поддержки ООО «С-Терра СиЭсПи», рекомендуем доставить аппаратную платформу в офис компании ООО «С-Терра СиЭсПи» для проведения диагностики
+
+
+
+
+                section.home-faq-item.accordion-item
+                    header.home-faq-item__header.accordion-item-header.accordion-trigger
+                        h2.home-faq-item__title Порядок передачи неисправного оборудования в ремонт через компанию ООО «С-Терра СиЭсПи»
+                        .home-faq-item__state
+                    .accordion-item-panel
+                        .home-faq-item__content
+                            .support-main-accordion__block
+                                .support-main-accordion__block__title Шаг 1
+                                .support-main-accordion__block__description
+                                    p Обратитесь в службу технической поддержки для проведения удаленной диагностики. В случае положительного заключения о возможной неисправности АП, служба технической поддержки выдает RMA ID для каждой неисправной аппаратной платформы
+
+                            .support-main-accordion__block
+                                .support-main-accordion__block__title Шаг 2
+                                .support-main-accordion__block__description
+                                    p После получения RMA ID следует каждую аппаратную платформу поместить в упаковку, защищающую при транспортировке от механических воздействий и влаги. В случае бескорпусной аппаратной платформы, упаковка должна обеспечивать защиту от электростатических разрядов. Мы рекомендуем для транспортировки аппаратной платформы использовать заводскую упаковку. В случае, если программно-аппаратный комплекс оборудован АПМДЗ, необходимо укомплектовать АПМДЗ Паспортом на изделие, считывателем iButton и идентификатором iButton, если данные устройства были в комплекте поставки.
+
+                            .support-main-accordion__block__alert
+                                .support-main-accordion__block__alert__title Примечание
+                                .support-main-accordion__block__alert__text Не отправляйте лицензии, CD, копии сертификатов, другие печатные материалы вместе с неисправным оборудованием!
+
+
+                            .support-main-accordion__block
+                                .support-main-accordion__block__title Шаг 3
+                                .support-main-accordion__block__description
+                                    p Нанесите на каждую упаковку полученный RMA ID
+
+                            .support-main-accordion__block
+                                .support-main-accordion__block__title Шаг 4
+                                .support-main-accordion__block__description
+                                    p Доставьте неисправное оборудование по адресу сервис центра
+                                    .support-main-accordion__block__description__item
+                                        svg.support-main-accordion__block__description__item__icon
+                                            use(href="./img/icons/icon-sprite.svg#pin-icon")
+                                        span 124460 г. Москва, г. Зеленоград, ОЭЗ Технополис Москва, ул. Конструктора Лукина, д. 14, стр. 12
+                                    .support-main-accordion__block__description__item
+                                        svg.support-main-accordion__block__description__item__icon
+                                            use(href="./img/icons/icon-sprite.svg#user")
+                                        span Контактное лицо для отправлений: <b>Грекова Неля</b>

@@ -1,0 +1,44 @@
+@import "jumbotron/index";
+@import "modification/style";
+@import "advantages/index";
+@import "sert/index";
+@import "tabs/index";
+@import "vieo-slider/index";
+@import "items-slider/index";
+
+.product-card-page{
+  .product-card-modification{
+    padding-bottom: 100px;
+  }
+  .product-card-advantages{
+    margin-bottom: 100px;
+  }
+  .home-contact-form{
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 1020px){
+  .product-card-page{
+    .product-card-modification{
+      padding-bottom: 80px;
+
+    }
+    .product-card-advantages{
+      margin-bottom: 80px;
+    }
+
+    .home-contact-form{
+      margin-top: 18px;
+      margin-bottom: 80px;
+    }
+  }
+}
+@media (max-width: 767px){
+  .product-card-page{
+
+    .home-contact-form{
+      margin-top: 15px;
+      margin-bottom: 80px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .press-mark
+            main.page-main
+
+            +breadcrumb(['Главная ', ' / Пресс-центр'], ' / Маркетинговые материалы')
+
+            include pages/press-mark/index
+
+        include components/footer/index.pug

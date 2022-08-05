@@ -1,0 +1,30 @@
+
+block content
+    .container
+        .row.pressevent-item-page
+            .col.col-12.col-sm-12.col-md-8
+                .pressevent-item-page__header
+                    .pressevent-item-page__title Практическая конференция «ИТ-Полигон — 2021»
+                    .pressevent-item-page__block
+                        .pressevent-item-page__date 20 мая 2021  
+                        .pressevent-item-page__category мероприятие
+                
+                .pressevent-item-page__text-block__content
+                    .pressevent-item-page__preview 
+                        img(src="./img/pressevent/preview.png")
+                    .pressevent-item-page__locale
+                        +svg-icon('map', 10, 10)
+                        .pressevent-page__item__text Ленинградская область, п. Орехово
+                    p Статус — Партнер. Выставочный стенд в составе экспозиции.
+                    p Доклады «Решения С-Терра. Импортозамещение» на выставочном стенде в соответствии с программой мероприятия. Выступающий — Андрей Работинский, ведущий инженер отдела технического консалтинга.
+                    .pressevent-item-page__text-block__btn-group
+                        a.btn.btn-primary-inverse.btn-round(href="#", disabled)
+                            +svg-icon('chevron-left', 7, 12)
+                        a.btn.btn-primary-inverse.btn-round(href="#")
+                            +svg-icon('chevron-right', 7, 12)
+                        a.btn.btn-primary-inverse(href="#") Все мероприятия
+                    
+            .pressevent-item-page__form
+                include ./contact-form.pug
+
+            

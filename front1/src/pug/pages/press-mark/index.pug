@@ -1,0 +1,40 @@
+include  ../../data/pressmark
+
+block content
+    .container
+        .pressmark-page__content(data-full-length="1021" data-page-size="12" data-action="./backend/pressmark.json" data-method="GET")
+            .pressmark-page__content__top
+                .pressmark-page__title Маркетинговые материалы
+                ul.pressmark-page__filter
+                    li.js-control-item.pressmark-page__filter__item
+                        button.js-control-item-button.pressmark-page__filter__button(type="button" data-type="1") Презентация
+                    li.js-control-item.pressmark-page__filter__item
+                        button.js-control-item-button.pressmark-page__filter__button.active(type="button" data-type="2") Печатные материалы
+                    li.js-control-item.pressmark-page__filter__item
+                        button.js-control-item-button.pressmark-page__filter__button(type="button" data-type="3") Корпоративный стиль
+
+            .pressmark-page__content__button
+                button.btn.btn-primary-inverse.btn-lg.m-b
+                    .btn-icon
+                        +svg-icon('upload-item', 22, 18)
+                    |Скачать все материалы ZIP
+
+            .pressmark-page__body.row
+                each item in pressmark
+                    .col.col-12.col-sm-12.col-md-6
+                        a.pressmark-page__item(href="#")
+                            .pressmark-page__image 
+                                img.pressmark-page__item__image(src=item.img)
+                            .pressmark-page__content
+                                .pressmark-page__item__title= item.title
+                                .pressmark-page__item__date= item.date
+                                button.btn.btn-primary-inverse.btn-lg.m-b
+                                    .btn-icon
+                                        +svg-icon('upload-item', 22, 18)
+                                    |Скачать PDF
+
+            .pressmark-page__controll
+                .pressmark-page__controll__text.js-control-text Показано 12 из 1021
+                button.js-control-more.pressmark-page__controll__btn.btn.btn-primary-inverse Еще 12
+
+                

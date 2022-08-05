@@ -1,0 +1,59 @@
+
+block content
+    .support-main-description
+        .container
+            .support-main-description__title Комплект поставки продуктов компании «С-Терра СиЭсПи» включает 1 год технической поддержки
+                span.description-with-title
+                    span.icon-js
+                        +svg-icon('exclamation-point', 14, 14)
+                    .description-with-title-abs
+                        .description-with-title-abs__wrap
+                            span Не распространяется на обновление продуктов до новых версий
+                            .description-with-title-abs__close
+                                +svg-icon('close-custom', 20,20)
+
+
+            .support-main-description__subtitle Доступность оказываемых услуг
+            .support-main-description__text Поддержка обрабатывает запросы в течение 9-ти часов (с 9 до 18 по московскому времени) в рабочие дни при пятидневной рабочей неделе.
+            .support-main-description__table
+
+                .table
+                    .table__head
+                        .table__head__mobile
+                            span Время реакции службы на запросы / Классификация запросов по уровню важности
+                        .table__head-item Классификация запросов по уровню важности
+                        .table__head-item Время реакции службы на запросы
+                    .table__body
+                        .table__body-row.table__body-row__grid
+                            .table__body-row-item
+                                .table__body-row-item__title Уровень 1. «Критичная важность»
+                                p Продукт не выполняет основные функции безопасности — шифрование трафика и/или контроль доступа, что приводит к нарушению безопасности деловых операций Пользователя. Компания и Пользователь готовы выделить необходимые ресурсы и в срочном порядке работать над разрешением Проблемы.
+
+                            .table__body-row-item
+                                .table__body-row-item__title Уровень 2. «Высокая важность»
+                                p Неадекватное функционирование Продукта приводит к ухудшению работоспособности сети Пользователя и простою в проведении деловых операций Пользователя. Компания и Пользователь выделяют и резервируют ресурсы необходимые для решения Проблемы.
+
+                            .table__body-row-item
+                                .table__body-row-item__title 2 часа
+
+                        .table__body-row
+                            .table__body-row-item
+                                .table__body-row-item__title Уровень 3. «Средняя важность»
+                                p Проблемы, связанные с эксплуатацией Продукта незначительно влияют на деловые операции Пользователя.
+
+                            .table__body-row-item
+                                .table__body-row-item__title 1 день
+
+                        .table__body-row
+                            .table__body-row-item
+                                .table__body-row-item__title Уровень 4. «Низкая важность»
+                                p Пользователю нужна информация о возможностях Продуктов или помощь по их установке или настройке. Отрицательное влияние на деловые операции Пользователя отсутствует.
+
+                            .table__body-row-item
+                                .table__body-row-item__title 5 день
+                a.btn.btn-primary-inverse(href="#" download)
+                    svg.btn-icon.desktop
+                        use(href="./img/icons/icon-sprite.svg#download-arrow")
+                    svg.btn-icon.mobile
+                        use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                    span Условия поддержки

@@ -1,0 +1,76 @@
+@import "jumbotron";
+@import "company-mission";
+@import "history";
+@import "about-team";
+@import "about-work";
+
+
+.about-page{
+  .superior{
+    margin-bottom: 100px;
+  }
+  .company-mission{
+    margin-bottom: 100px;
+  }
+  .about-history{
+    margin-bottom: 100px;
+  }
+  .about-team{
+    margin-bottom: 100px;
+  }
+  .about-work{
+  }
+  @include lg-tablet-up-max(){
+    .superior{
+      margin-bottom: 80px;
+    }
+    .company-mission{
+      margin-bottom: 80px;
+    }
+    .about-history{
+      margin-bottom: 80px;
+    }
+    .about-team{
+      margin-bottom: 80px;
+    }
+  }
+  @include tablet-up-max(){
+  }
+  @include lg-phone-up-max(){
+  }
+}
+
+
+.tns-controls{
+  button{
+    @include button;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 250ms ease-in-out;
+    width: 42px;
+    height: 42px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    &:hover {
+      box-shadow: 0 0 15px var(--primary-shadow);
+    }
+    &:active {
+      color: var(--primary-dark);
+    }
+
+    &[disabled],
+    &.disabled {
+      opacity: 0.5;
+
+      box-shadow: none;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+}

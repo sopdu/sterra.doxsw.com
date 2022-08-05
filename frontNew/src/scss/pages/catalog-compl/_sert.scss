@@ -1,0 +1,166 @@
+.catalog-compl-sertificates{
+  background-color: var(--light-grey);
+  padding-top: 90px;
+  padding-bottom: 101px;
+  overflow: hidden;
+  &__title{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 100%;
+    color: var(--dark-blue);
+    margin-bottom: 56px;
+  }
+  &__wrap{
+    max-width: 1380px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tns-ovh{
+    overflow: visible;
+  }
+  ul{
+    list-style: none;
+    li{
+      line-height: 143%;
+    }
+  }
+  .catalog-compl-sertificates-slider__control{
+    margin-top: 28px;
+    button{
+      &:first-child{
+        margin-right: 6px;
+      }
+      &:nth-child(2){
+        margin-right: 13px;
+      }
+    }
+    a{
+    }
+  }
+  @include lg-tablet-up-max(){
+    padding-top: 57px;
+    padding-bottom: 60px;
+    &__title{
+      font-size: 32px;
+      margin-bottom: 36px;
+      line-height: 120%;
+    }
+
+    &__wrap{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .catalog-compl-sertificates-slider__control {
+      margin-top: 31px;
+    }
+  }
+  @include tablet-up-max(){
+    &__title{
+      font-size: 25px;
+      margin-bottom: 30px;
+      line-height: 130%;
+    }
+    &__wrap{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  @include lg-phone-up-max(){
+
+    .catalog-compl-sertificates-slider__control {
+      margin-top: 32px;
+    }
+  }
+}
+
+
+
+.catalog-compl-sertificates__item {
+  width: 100%;
+  opacity: 0.3;
+  transition: .3s ease-in-out;
+  &__wrap{
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 25px;
+    background-color: var(--white);
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    &:hover{
+      box-shadow: 0 5px 15px var(--shadow);
+    }
+  }
+  &-image{
+    width: 100px;
+    height: 140px;
+    img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-content{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    margin-top: -5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7373BA;
+    margin-bottom: 13px;
+  }
+  &__description{
+    ul{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--black);
+    }
+  }
+  &.tns-slide-active {
+    transition: .3s ease-in-out;
+    opacity: 1;
+  }
+  @include lg-tablet-up-max(){
+    &__title{
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    &__description{
+      ul{
+        font-size: 13px;
+      }
+    }
+    &-image{
+      width: 106px;
+      min-width: 106px;
+    }
+    &__subtitle{
+      font-size: 11px;
+      margin-bottom: 9px;
+    }
+  }
+  @include lg-phone-up-max(){
+    &-image{
+      width: 100px;
+      min-width: 100px;
+    }
+  }
+}

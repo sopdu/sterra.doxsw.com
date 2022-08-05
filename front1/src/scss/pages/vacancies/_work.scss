@@ -1,0 +1,86 @@
+.vacancies-work{
+  &__title{
+    margin-bottom: 40px;
+  }
+  .scroll-slider-offset{
+    min-width: calc((100vw - 1300px) / 2);
+  }
+  &-slide{
+    &-wrap{
+      text-decoration: none;
+      padding: 40px 30px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      min-height: 240px;
+      pointer-events: none;
+    }
+    &__date{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light-blue);
+      margin-bottom: 13px;
+    }
+    &__title{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 120%;
+      color: var(--dark-blue);
+      flex-grow: 1;
+    }
+
+    .btn{
+      width: 195px;
+    }
+  }
+  @media  (max-width: 1380px){
+
+    .scroll-slider-offset{
+      min-width: 40px;
+    }
+  }
+  @media  (max-width: 1024px){
+
+    .scroll-slider-offset{
+      min-width: 30px;
+    }
+  }
+  @media  (max-width: 768px){
+
+    .scroll-slider-offset{
+      min-width: 20px;
+    }
+  }
+  @include lg-tablet-up-max(){
+    &__title{
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+    &-slide{
+      &__date{
+        font-size: 11px;
+      }
+      &__title{
+        font-size: 15px;
+      }
+    }
+  }
+  @include tablet-up-max(){
+    &__title{
+      font-size: 25px;
+      margin-bottom: 32px;
+    }
+  }
+  @include lg-phone-up-max(){
+    .vacancies-work-slide__date{
+      font-size: 11px;
+    }
+    .vacancies-work-slide__title{
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+}

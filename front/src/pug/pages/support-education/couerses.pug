@@ -1,0 +1,31 @@
+include ../../data/support-courses
+
+block content
+    .container
+        .support-education-page__top
+            .support-education-page__title Обучение
+            ul.support-education-page__filter
+                li.support-education-page__filter__item
+                    a.support-education-page__filter__button.active( data-type="1" href="#") Курсы
+                li.support-education-page__filter__item
+                    a.support-education-page__filter__button( data-type="2" href="#") Видеоуроки
+        .support-education-page__course-content
+
+            for item in supportCourse
+                a.support-education-page__course__item(href="#")
+                    if item.placeholder
+                        .support-education-page__course__item-image.support-education-page__course__item-image__placeholder
+                            img(src=item.image)
+                    else
+                        .support-education-page__course__item-image
+                            img(src=item.image)
+
+                    .support-education-page__course__item-text
+                        .support-education-page__course__item-text__title !{item.title}
+                        .support-education-page__course__item-text__block
+                            .support-education-page__course__item-text__block__title Место
+                            .support-education-page__course__item-text__block__value= item.place
+                        .support-education-page__course__item-text__block
+                            .support-education-page__course__item-text__block__title Длительность
+                            .support-education-page__course__item-text__block__value= item.duration
+                        .support-education-page__course__item-text__description= item.description

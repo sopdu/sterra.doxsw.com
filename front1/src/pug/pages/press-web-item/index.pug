@@ -1,0 +1,46 @@
+
+block content
+    .container
+        .row.pressweb-item-page
+            .col.col-12.col-sm-12.col-md-8
+                .pressweb-item-page__header
+                    .pressweb-item-page__title Версия 4.3. С-Терра Шлюз и С-Терра Шлюз DP. Функциональные возможности и нюансы эксплуатации
+                    .pressweb-item-page__block
+                        .pressweb-item-page__date 20 мая 2021  
+                        .pressweb-item-page__category вебинар
+        .row.pressweb-item-page
+            .col.col-12.col-sm-12.col-md-8
+                
+                .pressweb-item-page__text-block__content
+                    .pressweb-item-page__preview 
+                        video#player(playsinline,controls,data-poster="./img/pressweb/1.png")
+                            source(src="/video/demo.mp4",type="video/mp4")
+
+                    include ./team.pug
+
+                    p 20 мая 2021 г. состоялся вебинар «Версия 4.3. С-Терра КП, С-Терра Клиент и С-Терра Клиент А. Функциональные возможности и нюансы эксплуатации».
+                    p На вебинаре мы ответили на популярные вопросы про С-Терра КП, С-Терра Клиент и С-Терра Клиент А и провели демонстрацию на живых стендах.
+                    h4 Рассказали:
+                    ul.list
+                        li Как автоматизировать выпуск дистрибутивов С-Терра Клиент;
+                        li Как обеспечить двухфакторную аутентификацию пользователей;
+                        li Как настроить прозрачный режим работы С-Терра Клиент: никто не забудет включить VPN, не забудет пароль;
+                        li Как не потерять RDP до компьютера с С-Терра Клиент при установке/первом запуске.
+                    h4 Объяснили:
+                    ul.list 
+                        li Как С-Терра КП управляет VPN устройствами;
+                        li Как разграничить доступ администраторов к VPN устройствам и как разрешить работу нескольких администраторов одновременно;
+                        li Как обновить ключи сразу на всех С-Терра Клиент;
+                        li Что будет с VPN, если С-Терра КП выйдет из строя и как сделать backup.
+                    .pressweb-item-page__text-block__btn-group
+                        a.btn.btn-primary-inverse.btn-round(href="#", disabled)
+                            +svg-icon('chevron-left', 7, 12)
+                        a.btn.btn-primary-inverse.btn-round(href="#")
+                            +svg-icon('chevron-right', 7, 12)
+            .col.col-12.col-sm-12.col-md-4.sidebar
+                include ./sidebar.pug
+                    
+            .pressweb-item-page__form
+                include ./contact-form.pug
+
+            

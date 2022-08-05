@@ -1,0 +1,69 @@
+.industry-card-page{
+  .home-faq{
+    margin-bottom: 100px;
+  }
+  .home-faq .container {
+    max-width: 855px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home-faq .home-faq-item__content p{
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .home-faq .home-faq-item.active{
+    padding-bottom: 30px;
+    .home-faq-item__state{
+      align-self: center;
+    }
+  }
+  .home-faq .home-faq-item{
+    padding-top: 26px;
+    padding-bottom: 28px;
+  }
+}
+
+@media (max-width: 1020px){
+  .industry-card-page{
+    .home-faq{
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: 80px;
+    }
+    .home-faq .container {
+    }
+    .home-faq .home-faq-item__content p{
+      &:last-child{
+      }
+    }
+    .home-faq .home-faq-item.active{
+      .home-faq-item__state{
+      }
+    }
+    .home-faq .home-faq-item{
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .industry-card-page{
+    .home-faq{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .home-faq .container {
+    }
+    .home-faq .home-faq-item__content p{
+      &:last-child{
+      }
+    }
+    .home-faq .home-faq-item.active{
+      .home-faq-item__state{
+      }
+    }
+    .home-faq .home-faq-item{
+    }
+  }
+}

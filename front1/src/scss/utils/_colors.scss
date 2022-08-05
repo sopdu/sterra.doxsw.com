@@ -1,0 +1,108 @@
+/* COLORS */
+
+// colors
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --red: #e42d24;
+  --red-2: #9b130c;
+  --blue: #1e1d85;
+  --dark-blue: #000066;
+  --light-blue: #7373ba;
+  --grey: #dedef4;
+  --light-grey: #f6f6ff;
+}
+
+// concepts
+:root {
+  --shadow: rgba(0, 0, 102, 0.15);
+  --white-shadow: rgba(246, 246, 255, 0.5);
+
+  --primary: var(--blue);
+  --primary-contrast: var(--white);
+  --primary-dark: var(--dark-blue);
+  --primary-shadow: rgba(30, 29, 133, 0.5);
+  --primary-variant: #3a38a3;
+
+  /* Активный элемент меню, основное действие */
+  --accent: var(--red);
+  --accent-contrast: var(--white);
+  --accent-dark: var(--red-2);
+  --accent-shadow: var(--accent);
+
+  --error: var(--red);
+
+  --border: var(--grey);
+}
+
+// entities
+:root {
+  /* Фон */
+  --background: var(--white);
+
+  /* Cплошной текст */
+  --text: var(--black);
+
+  /* Доп. фон для блоков */
+  --block-background: var(--light-grey);
+  --hover-background: var(--light-grey);
+
+  /* Подписи, даты, лейблы */
+  --label: var(--light-blue);
+
+  /* Ссылки */
+  --link: var(--blue);
+  --link-variant: var(--dark-blue);
+
+  /* Фон синих блоков */
+  --dark-block-background: var(--blue);
+
+  /* Заголовки */
+  --header: var(--dark-blue);
+
+  --active-control: var(--blue);
+}
+
+.color-text {
+  color: var(--text);
+  &::before{
+    color: var(--text);
+  }
+  &::after{
+    color: var(--text);
+  }
+}
+.color-header {
+  color: var(--header);
+}
+.color-label {
+  color: var(--label);
+}
+.color-link {
+  color: var(--link);
+  &::before{
+    color: var(--link);
+  }
+  &::after{
+    color: var(--link);
+  }
+}
+.color-accent {
+  color: var(--accent);
+}
+.color-white {
+  color: var(--white);
+}
+.bg-block {
+  background-color: var(--block-background);
+}
+.bg-block-dark {
+  background-color: var(--dark-block-background);
+}
+.bg-white {
+  background-color: white;
+}
+
+body {
+  background: var(--background);
+}

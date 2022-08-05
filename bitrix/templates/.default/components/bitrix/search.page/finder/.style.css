@@ -1,0 +1,27 @@
+.div.doc-search input[type=submit]{
+	
+	height: 26px;	
+	border: none;
+	padding: 0px 70px 0px 8px;
+	position: ralative;
+	border-radius: 0px 50px 50px 0px;
+	-webkit-border-radius: 0px 50px 50px 0px;
+	-moz-border-radius: 0px 50px 50px 0px;
+	behavior: url('js/PIE.htc');
+	cursor: pointer;
+	color: #fff;
+	font-size: 14px;
+	margin-top: 7px;
+	margin-right: 4px;
+}
+
+.new_twelve{	
+
+	width: 980px;
+}
+
+.content b{
+
+	color: #000000;
+}
+

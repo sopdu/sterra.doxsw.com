@@ -1,0 +1,39 @@
+include  ../../data/presscorp
+
+block content
+    .container
+        .presscorp-page__content(data-full-length="1021" data-page-size="12" data-action="./backend/presscop.json" data-method="GET")
+            .presscorp-page__content__top
+                .presscorp-page__title Маркетинговые материалы
+                ul.presscorp-page__filter
+                    li.js-control-item.presscorp-page__filter__item
+                        button.js-control-item-button.presscorp-page__filter__button(type="button" data-type="1") Презентация
+                    li.js-control-item.presscorp-page__filter__item
+                        button.js-control-item-button.presscorp-page__filter__button(type="button" data-type="2") Печатные материалы
+                    li.js-control-item.presscorp-page__filter__item
+                        button.js-control-item-button.presscorp-page__filter__button.active(type="button" data-type="3") Корпоративный стиль
+
+            .presscorp-page__content__button
+                button.btn.btn-primary-inverse.btn-lg.m-b
+                    .btn-icon
+                        +svg-icon('upload-item', 22, 18)
+                    |Скачать все материалы ZIP
+
+            .presscorp-page__body.row
+                each item in presscorp
+                    .col.col-12.col-sm-12.col-md-6
+                        a.presscorp-page__item(href="#")
+                            .presscorp-page__image 
+                                img.presscorp-page__item__image(src=item.img)
+                            .presscorp-page__content
+                                .presscorp-page__item__title= item.title
+                                .presscorp-page__item__date= item.date
+                                button.btn.btn-primary-inverse.btn-lg.m-b
+                                    .btn-icon
+                                        +svg-icon('upload-item', 22, 18)
+                                    |Скачать PDF
+
+            .presscorp-page__controll
+                .presscorp-page__controll__text.js-control-text Показано 12 из 1021
+                button.js-control-more.presscorp-page__controll__btn.btn.btn-primary-inverse Еще 12
+                

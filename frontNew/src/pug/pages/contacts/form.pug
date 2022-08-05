@@ -1,0 +1,21 @@
+block content
+    .contacts-form
+        .container
+            .contacts-form__wrap
+                .contacts-form__title Подпишитесь на рассылку и будьте в курсе новостей «С&#8209;Терра СиЭсПи»
+                form.contacts-form__block(action="./backend/contact-form.json" method="GET")
+                    .contacts-form__block__row
+                        .form-field
+                            label.form-label Название компании
+                            input.form-control(type="text" name="company" placeholder="" )
+                        .form-field
+                            label.form-label Email*
+                            input.form-control(type="text" name="email"  )
+                    .contacts-form__block__row__footer
+                        .form-field.home-contact-form__confirm
+                            label.checkbox
+                                input(type="checkbox" name="agreement")
+                                span.checkbox-box
+                                .checkbox-label Даю согласие на обработку своих персональных данных в соответствии с #[a(href="#") Политикой обработки персональных данных ООО «С-Терра СиЭсПи»].
+                        .home-contact-form__submit
+                            button.btn.btn-primary.btn-block(type="submit") Отправить

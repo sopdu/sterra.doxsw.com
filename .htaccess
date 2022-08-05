@@ -1,0 +1,59 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+    php_flag allow_call_time_pass_reference 1
+    php_flag session.use_trans_sid off
+    php_value max_input_vars 10000
+    php_value upload_max_filesize 2000M
+    php_value post_max_size 2000M 
+    php_value memory_limit 2512M
+    #php_value mbstring.func_overload 2
+    #php_value mbstring.internal_encoding UTF-8
+    php_value pcre.recursion_limit 100000
+    
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_URI} ^/support/activatemsm/?$
+	RewriteRule ^(.+)$ https://old.s-terra.com/support/activatemsm/index.php [R=301,L]
+
+	RewriteCond %{REQUEST_URI} ^/component/user/reset/?$
+        RewriteRule ^(.+)$ https://old.s-terra.com/component/user/reset [R=301,L]
+
+        RewriteCond %{REQUEST_URI} ^/login/?$
+        RewriteRule ^(.+)$ /auth/index.php [R=301,L]
+
+	RewriteCond %{REQUEST_URI} ^/joomla/(.*)$
+	RewriteRule ^(.+)$ https://old.s-terra.com/$1 [R=301,L]
+
+	RewriteCond %{REQUEST_URI} ^/registrationcomplet//?$
+	RewriteRule ^(.+)$ https://old.s-terra.com/registrationcomplet/ [R=301,L]
+
+        RewriteCond %{REQUEST_URI} ^/registration/?$
+	RewriteRule ^(.+)$ https://old.s-terra.com/index.php?option=com_virtuemart&page=shop.registration [L]
+
+	#Add / at the end
+	RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
+	RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>

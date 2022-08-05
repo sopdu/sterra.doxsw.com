@@ -1,0 +1,31 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .support-documentation-page.page-main
+            +breadcrumb(['Главная ',' / Поддержка'], ' / Документация')
+            .container
+                .support-documentation__title Документация
+                .support-documentation__banner
+                    .support-documentation__banner__image
+                        img(src="./img/support-documentation/main.png")
+                    .support-documentation__banner__text
+                        p У нас есть Портал документации, на котором собраны все документы по средствам защиты информации, в том числе лицензионные соглашения, формуляры ФСБ и ФСТЭК и правила пользования продукцией.
+                        a.btn.btn-accent(href="#") Перейти на портал
+
+
+                ul.support-documentation-page__filter
+                    li.support-documentation-page__filter__item
+                        a.support-documentation-page__filter__button( type="button" data-type="1" href="#") Сертификаты на продукцию
+                    li.support-documentation-page__filter__item
+                        a.support-documentation-page__filter__button( type="button" data-type="2" href="#") Лицензии
+                    li.support-documentation-page__filter__item
+                        a.support-documentation-page__filter__button( type="button" data-type="3" href="#") Свидетельства на ПО
+                    li.support-documentation-page__filter__item
+                        a.support-documentation-page__filter__button.active( type="button" data-type="4" href="#") Нормативные документы
+                include pages/support-documentation/4
+
+
+        include components/footer/index.pug

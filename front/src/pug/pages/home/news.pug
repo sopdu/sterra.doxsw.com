@@ -1,0 +1,41 @@
+<!-- NEWS -->
+
+include ../../mixins/slider.pug
+include ../../data/news.pug
+
+.home-news
+  .container
+    header.home-news__header
+      h2.h2.home-news__title Новости и события
+      ul.slider-filters
+        li.slider-filters__item
+          button.slider-filter.active(type="button" data-type="news") Новости
+        li.slider-filters__item
+          button.slider-filter(type="button" data-type="events") Мероприятия
+        li.slider-filters__item
+          button.slider-filter(type="button" data-type="updates") Обновления
+
+  #news-slider.scroll-slider
+    .scroll-slider-viewport
+      .scroll-slider-slides
+
+        each article in articles
+          // SLIDE
+          section.scroll-slider-slide.c-col-6.c-col-md-4.c-col-lg-3
+            a.home-news-article(href=article.link data-type=article.type)
+              .home-news-article__img
+                if article.img
+                  img(src=article.img)
+                else
+                  .image-placeholder
+              .home-news-article__date= article.date
+              h3.home-news-article__title= article.title
+              .home-news-article__text !{article.text}
+
+    .container
+      +slider-controls({
+        link: '#',
+        name: 'Пресс-центр'
+      })
+
+<!-- /NEWS -->

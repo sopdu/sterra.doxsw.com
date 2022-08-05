@@ -1,0 +1,10 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .support-education-page.page-main
+            +breadcrumb(['Главная ', ' / Поддержка'] , ' / Обучение — Курсы')
+            include pages/support-education/couerses
+        include components/footer/index.pug

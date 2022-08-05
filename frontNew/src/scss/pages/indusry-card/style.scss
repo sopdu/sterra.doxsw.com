@@ -1,0 +1,29 @@
+@import "jumbotron/index";
+@import "clients/index";
+@import "table/index";
+@import "faq";
+@import "items/index";
+.industry-card-page{
+  .home-contact-form{
+    margin-top: 103px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 1020px){
+  .industry-card-page{
+
+    .home-contact-form{
+      margin-top: 78px;
+      margin-bottom: 80px;
+    }
+  }
+}
+@media (max-width: 767px){
+  .industry-card-page{
+
+    .home-contact-form{
+      margin-top: 75px;
+      margin-bottom: 80px;
+    }
+  }
+}

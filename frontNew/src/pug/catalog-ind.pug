@@ -1,0 +1,24 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .catalog-ind-page
+            main.page-main
+
+                .bg-block
+                    .catalog-compl-page__jumbotron
+                        include pages/catalog-compl/jumbotron/index.pug
+
+            +breadcrumb(['Главная '], ' / Каталог — Отраслевые решения')
+
+            include pages/catalog-ind/catalog/catalog
+            include pages/catalog-compl/sertificates/index
+            include pages/catalog-compl/description/index
+            include pages/catalog-compl/sertificates/sert2
+            include pages/catalog-compl/form/index
+
+        include components/footer/index.pug

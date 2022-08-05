@@ -1,0 +1,24 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .support-download-page.page-main
+            +breadcrumb(['Главная ',' / Поддержка'], ' / Загрузки')
+            .container
+                .support-download__title Загрузки
+                .support-download__wrap
+                    .support-download__item
+                        .support-download__item__title Рекомендации по обеспечению безопасности применения СКЗИ в условиях наличия уязвимостей прикладного и системного ПО (для С-Терра Шлюз 4.3)
+                        a.btn.btn-primary-inverse.support-download__btn(href="#" download)
+                            svg.btn-icon
+                                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                            span Скачать PDF
+                    .support-download__item
+                        .support-download__item__title Информация об оборудовании на АК С-Терра и АП ESR-X-H
+                        a.btn.btn-primary-inverse.support-download__btn(href="#" download)
+                            svg.btn-icon
+                                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                            span Скачать PDF
+        include components/footer/index.pug

@@ -1,0 +1,13 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+
+    .page
+        include components/header/index.pug
+        .support-course-item-page.page-main
+            +breadcrumb(['Главная ', ' / Поддержка', ' / Обучение — Курсы'] , ' / Курс 2. Защита сетевой инфраструктуры на основе продуктов С-Терра ')
+            include pages/support-education/course-item
+            include pages/support-education/course-form-2
+        include components/footer/index.pug

@@ -1,0 +1,263 @@
+.case-page .text-container {
+  max-width: 1076px;
+  margin-bottom: 100px;
+}
+.case-page__title {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 120%;
+  color: #000066;
+  margin-bottom: 11px;
+}
+.case-page__subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7373BA;
+  margin-bottom: 26px;
+}
+.case-page__content {
+  margin-bottom: 70px;
+}
+.case-page__content .tns-outer {
+  position: relative;
+}
+.case-page__content .tns-outer .tns-controls button:first-child {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.case-page__content .tns-outer .tns-controls button:last-child {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.case-page__content p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  color: #000000;
+  margin-bottom: 22px;
+}
+.case-page__content p:first-child {
+  font-weight: 500;
+}
+.case-page__content p.separate {
+  margin-top: 32px;
+  background: rgba(246, 246, 255, 0.5);
+  display: block;
+  padding: 25px;
+  margin-bottom: 32px;
+}
+.case-page__content .about-team-slider-thumbnails-wrap {
+  margin-bottom: 30px;
+}
+.case-page .case-reviews-slider__item__wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 40px 36px 40px;
+  background: #FFFFFF;
+  border: 1px solid #DEDEF4;
+  min-height: 490px;
+  text-decoration: none;
+}
+.case-page .case-reviews-slider__item__top {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  color: #000066;
+  margin-bottom: 15px;
+}
+.case-page .case-reviews-slider__item__image {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.case-page .case-reviews-slider__item__description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #000000;
+  margin-bottom: 18px;
+}
+.case-page .case-reviews-slider__item__bottom {
+  max-width: 376px;
+}
+.case-page .case-reviews-slider__item__bottom .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+}
+.case-page .case-reviews-slider__item__bottom .value {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  /* or 21px */
+  color: #000000;
+}
+.case-page .case-reviews-slider__control {
+  margin-top: 30px;
+}
+.case-page .case-reviews-slider__control .btn:first-child {
+  margin-right: 9px;
+}
+.case-page .case-reviews-slider__control .btn:nth-child(2) {
+  margin-right: 9px;
+}
+
+@media (max-width: 1020px) {
+  .case-page .text-container {
+    margin-bottom: 80px;
+  }
+  .case-page__title {
+    font-size: 32px;
+    margin-bottom: 11px;
+  }
+  .case-page__subtitle {
+    font-size: 11px;
+    margin-bottom: 30px;
+  }
+  .case-page__content {
+    margin-bottom: 50px;
+  }
+  .case-page__content p {
+    font-size: 15px;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+  .case-page__content p:first-child {
+    margin-bottom: 23px;
+  }
+  .case-page__content p.separate {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .case-page__content .about-team-slider {
+    margin-top: 10px;
+  }
+  .case-page__content .about-team-slider-thumbnails-wrap {
+    margin-top: 16px;
+  }
+  .case-page .case-reviews-slider__item__wrap {
+    min-height: unset;
+    padding-bottom: 38px;
+  }
+  .case-page .case-reviews-slider__item__top {
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+  .case-page .case-reviews-slider__item__image {
+    margin-bottom: 15px;
+  }
+  .case-page .case-reviews-slider__item__description {
+    font-size: 13px;
+    line-height: 140%;
+    margin-bottom: 18px;
+  }
+  .case-page .case-reviews-slider__item__bottom {
+    max-width: 376px;
+  }
+  .case-page .case-reviews-slider__item__bottom .title {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .case-page .case-reviews-slider__item__bottom .value {
+    font-size: 13px;
+    line-height: 140%;
+  }
+  .case-page .case-reviews-slider__control {
+    margin-top: 30px;
+  }
+  .case-page .case-reviews-slider__control .btn:first-child {
+    margin-right: 9px;
+  }
+  .case-page .case-reviews-slider__control .btn:nth-child(2) {
+    margin-right: 9px;
+  }
+}
+@media (max-width: 767px) {
+  .case-page .about-team-slider-thumbnails li {
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    height: 47px;
+    margin-right: 13px;
+  }
+  .case-page .text-container {
+    margin-bottom: 80px;
+  }
+  .case-page__title {
+    font-size: 25px;
+    line-height: 120%;
+  }
+  .case-page__subtitle {
+    font-size: 11px;
+    margin-bottom: 17px;
+  }
+  .case-page__content {
+    margin-bottom: 50px;
+  }
+  .case-page__content p {
+    font-size: 15px;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+  .case-page__content p.separate {
+    padding: 20px;
+  }
+  .case-page__content .about-team-slider {
+    margin-top: 0px;
+  }
+  .case-page__content .about-team-slider-thumbnails-wrap {
+    margin-top: 14px;
+    margin-bottom: 22px;
+  }
+  .case-page .case-reviews-slider__item__wrap {
+    min-height: 448px;
+    padding-bottom: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+    padding-top: 35px;
+  }
+  .case-page .case-reviews-slider__item__top {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .case-page .case-reviews-slider__item__image {
+    margin-bottom: 15px;
+  }
+  .case-page .case-reviews-slider__item__description {
+    font-size: 13px;
+    line-height: 140%;
+    margin-bottom: 18px;
+  }
+  .case-page .case-reviews-slider__item__bottom {
+    max-width: 376px;
+  }
+  .case-page .case-reviews-slider__item__bottom .title {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .case-page .case-reviews-slider__item__bottom .value {
+    font-size: 13px;
+    line-height: 140%;
+  }
+  .case-page .case-reviews-slider__control {
+    margin-top: 30px;
+  }
+  .case-page .case-reviews-slider__control .btn:first-child {
+    margin-right: 9px;
+  }
+  .case-page .case-reviews-slider__control .btn:nth-child(2) {
+    margin-right: 9px;
+  }
+}

@@ -1,0 +1,18 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .support-main-page.page-main
+            include pages/support-main/jumbotron/index
+
+            +breadcrumb(['Главная '], ' / Поддержка')
+            include pages/support-main/description/description
+            include pages/support-main/support-card/index
+            include pages/support-main/warranty/index
+
+            include pages/support-main/accordion/index
+            include pages/support-main/video-slider/index
+
+        include components/footer/index.pug

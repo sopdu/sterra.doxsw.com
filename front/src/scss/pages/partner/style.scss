@@ -1,0 +1,38 @@
+@import "jumbotron";
+@import "superior";
+@import "ourpartners";
+@import "slider";
+
+.partner-page{
+  .breadcrumb__list{
+    padding-bottom: 45px;
+  }
+  .partner-superior{
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .partner-page{
+    .breadcrumb__list{
+      padding-bottom: 35px;
+    }
+    .partner-superior{
+      margin-bottom: 80px;
+    }
+  }
+
+}
+@media (max-width: 767px) {
+
+  .partner-page{
+    .breadcrumb__list{
+      padding-bottom: 29px;
+    }
+    .partner-superior{
+      margin-bottom: 67px;
+    }
+  }
+
+}

@@ -1,0 +1,38 @@
+.tooltip{
+position: relative;
+display: none;
+ /* opacity: 0;*/
+width: 216px;
+height: 330px;
+padding: 12px;
+top: -390px;
+  background: #fff;
+  color: #30333A;
+  left: -15px;
+  font-size: 11px;
+  line-height: 16px;
+  border-radius: 10px;
+  border: 1px #e42d24 solid;
+  transition: all 0.5s ease;
+}
+
+.tooltip:before{
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  right: 108px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #e42d24;
+  border-bottom: 12px solid transparent;
+}
+
+.btnnote{
+	float: left;
+}
+
+.btnnote:hover .tooltip{
+  display: block;
+/*  opacity: 1;*/
+  z-index: 9999;
+}

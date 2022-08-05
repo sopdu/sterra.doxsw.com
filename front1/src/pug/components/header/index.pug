@@ -1,0 +1,62 @@
+<!-- HEADER -->
+
+include ../../data/navigation.pug
+include ../../mixins/icon.pug
+include _mixins.pug
+
+header.header
+  .header-view
+    .container
+      .header-view__wrapper
+        a.header-logo(href="/")
+          img(src="./img/logo.png" alt="S-Terra logo")
+
+        .header__navigation
+          include _header-navigation.pug
+
+        .header__contacts
+          include _header-contacts.pug
+
+        .header__actions
+          include _header-search.pug
+
+          a.btn.btn-round.btn-sm.btn-primary-inverse.header-account(href="#")
+            +svg-icon('user', 16, 16)
+
+        button.icon-btn.header-toggler(type="button" data-closed)
+          span.burger
+            +svg-icon('burger', 20, 17)
+          span.times
+            +svg-icon('times', 16, 16)
+
+
+  .header-pane(hidden)
+    .header-pane__mask
+    .header-pane__content
+      .container
+        .header-pane__search
+          include components/search.pug
+        .header-pane__nav
+
+          .header-menu
+            +menu-section({
+              id: 'account',
+              link: '#',
+              name: 'Личный кабинет'
+            })
+            .d-md-none
+              +menu-section(menu.about)
+            +menu-section(menu.catalog)
+            .d-none.d-md-block
+              +menu-section(menu.about)
+            +menu-section(menu.support)
+            +menu-section(menu.press)
+            +menu-section(menu.partners)
+            +menu-section(menu.contacts)
+
+        .header-pane__contacts
+          include components/contacts.pug
+
+<!-- /HEADER -->
+
+include _question.pug

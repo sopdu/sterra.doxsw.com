@@ -1,0 +1,204 @@
+include ../../../data/partners.pug
+
+
+block content
+    section.our-partners
+        .container.tab
+            header.our-partners__header
+                h2.h1.our-partners__title Наши партнеры
+                ul.tab-head
+                    li.tab-head__item(data-type="tech")
+                        button.tab-head__button(type="button") Технологические партнеры
+                    li.tab-head__item(data-type="buisnes")
+                        button.tab-head__button(type="button") Бизнес-партнеры
+            .tab-body
+                .tab-body__item( data-type="tech")
+                    .our-partners__grid
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/1.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/2.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/3.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/4.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/5.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/6.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/7.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/8.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/9.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/10.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/11.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/12.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/13.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/14.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/15.png")
+                        a.our-partners-item(href="#")
+                            img(src="./img/partner/tech/16.png")
+
+                    .vacancies-vacant__controll.js-control-text-partner-show
+                        .vacancies-vacant__controll__text.js-control-text-partner Показано 6 из 9
+                        button.js-control-more-partner.vacancies-vacant__controll__btn.btn.btn-primary-inverse Еще 3
+                .tab-body__item(type="button" data-type="buisnes")
+                    .our-partners__list
+                        .our-partners__list-top
+
+                            .custom-select
+                                select
+                                    option(value="0") Округ
+                                    option Дальневосточный федеральный округ
+                                    option Центральный
+                                    option Северо-Западный
+                                    option Южный
+                                    option Северо-Кавказский
+                                    option Приволжский
+                                    option Уральский
+                                    option Сибирский
+                                    option Дальневосточный
+
+                            .custom-select-modal
+                                .custom-select-modal-title.start
+                                    span Все города
+
+                                .custom-select-modal__content
+                                    .custom-select-modal__content__close
+                                        +svg-icon('close-custom', 20, 20)
+                                    .custom-select-modal__content__top
+                                        .custom-select-modal__content__top-item.active Все
+                                        .custom-select-modal__content__top-item А
+                                        .custom-select-modal__content__top-item Б
+                                        .custom-select-modal__content__top-item В
+                                        .custom-select-modal__content__top-item.disabled Г
+                                        .custom-select-modal__content__top-item.disabled Д
+                                        .custom-select-modal__content__top-item Е
+                                        .custom-select-modal__content__top-item Ж
+                                        .custom-select-modal__content__top-item.disabled З
+                                        .custom-select-modal__content__top-item И
+                                        .custom-select-modal__content__top-item Й
+                                        .custom-select-modal__content__top-item К
+                                        .custom-select-modal__content__top-item Л
+                                        .custom-select-modal__content__top-item М
+                                        .custom-select-modal__content__top-item Н
+                                        .custom-select-modal__content__top-item О
+                                        .custom-select-modal__content__top-item П
+                                        .custom-select-modal__content__top-item Р
+                                        .custom-select-modal__content__top-item С
+                                        .custom-select-modal__content__top-item Т
+                                        .custom-select-modal__content__top-item У
+                                        .custom-select-modal__content__top-item.disabled Ф
+                                        .custom-select-modal__content__top-item Х
+                                        .custom-select-modal__content__top-item.disabled Ц
+                                        .custom-select-modal__content__top-item Ч
+                                        .custom-select-modal__content__top-item.disabled Ш
+                                        .custom-select-modal__content__top-item.disabled Щ
+                                        .custom-select-modal__content__top-item.disabled Э
+                                        .custom-select-modal__content__top-item Ю
+                                        .custom-select-modal__content__top-item Я
+                                    .custom-select-modal__content__bottom
+                                        .custom-select-modal__content__bottom__wrap
+                                            .custom-select-modal__content__bottom__item.bold Москва
+                                            .custom-select-modal__content__bottom__item.bold Санкт-Петербург
+                                            .custom-select-modal__content__bottom__item Астрахань
+                                            .custom-select-modal__content__bottom__item Барнаул
+                                            .custom-select-modal__content__bottom__item Белгород
+                                            .custom-select-modal__content__bottom__item Владивосток
+                                            .custom-select-modal__content__bottom__item Владимир
+                                            .custom-select-modal__content__bottom__item Волгоград
+                                            .custom-select-modal__content__bottom__item Вологда
+                                            .custom-select-modal__content__bottom__item Воронеж
+                                            .custom-select-modal__content__bottom__item Екатеринбург
+                                            .custom-select-modal__content__bottom__item Железнодорожный
+                                            .custom-select-modal__content__bottom__item Иркутск
+                                            .custom-select-modal__content__bottom__item Йошкар-ола
+                                            .custom-select-modal__content__bottom__item Казань
+                                            .custom-select-modal__content__bottom__item Калининград
+                                            .custom-select-modal__content__bottom__item Калуга
+                                            .custom-select-modal__content__bottom__item Киров
+                                            .custom-select-modal__content__bottom__item Королев
+                                            .custom-select-modal__content__bottom__item Красногорск
+                                            .custom-select-modal__content__bottom__item Краснодар
+                                            .custom-select-modal__content__bottom__item Красноярск
+                                            .custom-select-modal__content__bottom__item Курган
+                                            .custom-select-modal__content__bottom__item Курск
+                                            .custom-select-modal__content__bottom__item Липецк
+                                            .custom-select-modal__content__bottom__item Нижневартовск
+                                            .custom-select-modal__content__bottom__item Нижний Новгород
+                                            .custom-select-modal__content__bottom__item Новокуйбышев
+                                            .custom-select-modal__content__bottom__item Новосибирск
+                                            .custom-select-modal__content__bottom__item Ноябрьск
+                                            .custom-select-modal__content__bottom__item Омск
+                                            .custom-select-modal__content__bottom__item Орел
+                                            .custom-select-modal__content__bottom__item Пенза
+                                            .custom-select-modal__content__bottom__item Пермь
+                                            .custom-select-modal__content__bottom__item Петропавловск-Камчасткий
+                                            .custom-select-modal__content__bottom__item Ростов-на-Дону
+                                            .custom-select-modal__content__bottom__item Рыбинск
+                                            .custom-select-modal__content__bottom__item Саратов
+                                            .custom-select-modal__content__bottom__item Симферополь
+                                            .custom-select-modal__content__bottom__item Сыктывкар
+                                            .custom-select-modal__content__bottom__item Таганрог
+                                            .custom-select-modal__content__bottom__item Тамбов
+                                            .custom-select-modal__content__bottom__item Тверь
+                                            .custom-select-modal__content__bottom__item Тольятти
+                                            .custom-select-modal__content__bottom__item Томск
+                                            .custom-select-modal__content__bottom__item Тула
+                                            .custom-select-modal__content__bottom__item Тюмень
+                                            .custom-select-modal__content__bottom__item Улан-Удэ
+                                            .custom-select-modal__content__bottom__item Уфа
+                                            .custom-select-modal__content__bottom__item Хабаровск
+                                            .custom-select-modal__content__bottom__item Ханты-Мансийск
+                                            .custom-select-modal__content__bottom__item Чебоксары
+                                            .custom-select-modal__content__bottom__item Челябинск
+                                            .custom-select-modal__content__bottom__item Юбилейный
+                                            .custom-select-modal__content__bottom__item Южно-Сахалинск
+                                            .custom-select-modal__content__bottom__item Ярославль
+
+                            .search-field.js-input-search-field
+                                .search-field__icon
+                                    +svg-icon('search', 14, 14)
+                                input.js-input-search.form-control(value="" placeholder='Поиск' name="q" data-field autocomplete="off")
+                                button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                                    +svg-icon('times', 10, 10)
+
+                        .our-partners__list__bottom
+                            for item in partners
+                                if item.long
+                                    .our-partners__list__bottom__item.our-partners__list__bottom__item__long
+                                        .our-partners__list__bottom__item_wrap
+                                            a.our-partners__list__bottom__item__title(href="#")= item.title
+                                            .our-partners__list__bottom__item__city= item.city
+                                            .our-partners__list__bottom__item__area= item.area
+
+                                else
+                                    if item.disabled
+                                        .our-partners__list__bottom__item
+                                            .our-partners__list__bottom__item_wrap
+                                                .our-partners__list__bottom__item__title.our-partners__list__bottom__item__title_dis= item.title
+                                                .our-partners__list__bottom__item__city= item.city
+                                                .our-partners__list__bottom__item__area= item.area
+                                    else
+                                        .our-partners__list__bottom__item
+                                            .our-partners__list__bottom__item_wrap
+                                                a.our-partners__list__bottom__item__title(href="#")= item.title
+                                                .our-partners__list__bottom__item__city= item.city
+                                                .our-partners__list__bottom__item__area= item.area
+
+                        .vacancies-vacant__controll.js-control-text-partner-2-show
+                            .vacancies-vacant__controll__text.js-control-text-partner-2 Показано 24 из 274
+                            button.js-control-more-partner-2.vacancies-vacant__controll__btn.btn.btn-primary-inverse Еще 24
+
+
+
+
+

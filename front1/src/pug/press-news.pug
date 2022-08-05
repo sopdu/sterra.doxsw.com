@@ -1,0 +1,16 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .press-news
+            main.page-main
+
+            +breadcrumb(['Главная '], ' / Пресс-центр — Новости')
+
+            include pages/press-news/index
+
+        include components/footer/index.pug

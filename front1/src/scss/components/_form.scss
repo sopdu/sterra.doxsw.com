@@ -1,0 +1,27 @@
+.form-field {
+  margin-bottom: var(--space-unit);
+}
+
+.form-label {
+  display: block;
+  color: var(--label);
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.form-error {
+  color: var(--error);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.input-with-icon{
+  position: relative;
+  svg{
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+  }
+}

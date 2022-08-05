@@ -1,0 +1,28 @@
+
+include ../../data/awards
+
+block content
+
+
+    .container
+        .awards-page__content(data-full-length="32" data-page-size="8" data-action="./backend/awards.json" data-method="GET")
+            .awards-page__content__top
+                .awards-page__title Награды и благодарности
+                ul.awards-page__filter
+                    li.js-control-item.awards-page__filter__item
+                        button.js-control-item-button.awards-page__filter__button.active(type="button" data-type="1") Награды
+                    li.js-control-item.awards-page__filter__item
+                        button.js-control-item-button.awards-page__filter__button(type="button" data-type="2") Благодарности
+            .awards-page__body.row
+                 each item in awards
+                     .js-item.col.col-12.col-md-6
+                         a.awards-page__item( href="#")
+                            .awards-page__item__image
+                                img(src=item.image alt="#")
+                            .awards-page__item__text
+                                .awards-page__item__title= item.title
+                                .awards-page__item__description= item.description
+
+            .awards-page__controll
+                .awards-page__controll__text.js-control-text
+                button.js-control-more.awards-page__controll__btn.btn.btn-primary-inverse

@@ -1,0 +1,27 @@
+input {
+  @include form-control();
+  @include text-form-control();
+}
+
+textarea {
+  @include form-control();
+  @include text-form-control();
+  padding-top: 12px;
+  padding-bottom: 12px;
+  resize: vertical;
+  min-height: 95px;
+}
+
+select {
+  @include form-control();
+  @include text-form-control();
+}
+
+.form-control {
+  @include form-control();
+  @include text-form-control();
+}
+
+textarea.form-control {
+  min-height: 95px;
+}

@@ -1,0 +1,10 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .support-course-item-page.page-main
+            +breadcrumb(['Главная ', ' / Поддержка', ' / Обучение — Видеоуроки'] , ' / Урок 2: Как быстро развернуть демо стенд?')
+            include pages/support-education/course-video
+        include components/footer/index.pug

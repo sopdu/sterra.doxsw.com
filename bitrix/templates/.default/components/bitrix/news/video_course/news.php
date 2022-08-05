@@ -1,0 +1,101 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
+$rsResult = CIBlockElement::GetList(
+    [],
+    [
+        'IBLOCK_ID' => 56,
+        'ACTIVE' => 'Y',
+        '!PROPERTY_VERSIA' => false,
+    ],
+    ['PROPERTY_versia']
+);
+ 
+while($arVerResult=$rsResult->Fetch()){
+    $arVersions[] = $arVerResult["PROPERTY_VERSIA_VALUE"];
+}
+?>
+ <div class="support-education-page page-main">
+	<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", Array(
+        "START_FROM" => "1",
+        "PATH" => "",
+        "SITE_ID" => SITE_ID,
+    ),
+        false
+    );?>
+        <div class="container form-js" data-full-length="20" data-page-size="12" data-action="/local/ajax/education-video.php" data-method="GET">
+          <div class="support-education-page__top">
+            <div class="support-education-page__title">Обучение</div>
+            <ul class="support-education-page__filter">
+              <li class="support-education-page__filter__item"><a class="support-education-page__filter__button" data-type="1" href="/support/education/courses/">Курсы</a></li>
+              <li class="support-education-page__filter__item"><a class="support-education-page__filter__button active" data-type="2" href="/support/education/videouroki/">Видеоуроки</a></li>
+            </ul>
+          </div>
+          <div class="support-education-page__control">
+            <div class="custom-select">
+              <select class="js-select">
+                <option value="" selected>Версия</option>
+                <?foreach($arVersions as $version) {?>
+                <option><?=$version?></option>
+                <?}?>
+              </select>
+            </div>
+            <div class="search-field js-input-search-field">
+              <div class="search-field__icon">
+                      <svg width="14" height="14">
+                        <use xlink:href="#i-search" href="#i-search"></use>
+                      </svg>
+              </div>
+              <input class="js-input-search form-control" value="" placeholder="Поиск по названию" name="q" data-field autocomplete="off">
+              <button class="js-input-search-clear icon-btn search-field__reset" type="button" data-reset></button>
+            </div>
+          </div>
+
+
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"videocourse",
+	Array(
+		"IBLOCK_TYPE"	=>	$arParams["IBLOCK_TYPE"],
+		"IBLOCK_ID"	=>	$arParams["IBLOCK_ID"],
+		"NEWS_COUNT"	=>	$arParams["NEWS_COUNT"],
+		"SORT_BY1"	=>	$arParams["SORT_BY1"],
+		"SORT_ORDER1"	=>	$arParams["SORT_ORDER1"],
+		"SORT_BY2"	=>	$arParams["SORT_BY2"],
+		"SORT_ORDER2"	=>	$arParams["SORT_ORDER2"],
+		"FIELD_CODE"	=>	$arParams["LIST_FIELD_CODE"],
+		"PROPERTY_CODE"	=>	$arParams["LIST_PROPERTY_CODE"],
+		"DETAIL_URL"	=>	$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
+		"SECTION_URL"	=>	$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
+		"IBLOCK_URL"	=>	$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
+		"DISPLAY_PANEL"	=>	$arParams["DISPLAY_PANEL"],
+		"SET_TITLE"	=>	'N',
+		"SET_STATUS_404" => $arParams["SET_STATUS_404"],
+		"INCLUDE_IBLOCK_INTO_CHAIN"	=>	$arParams["INCLUDE_IBLOCK_INTO_CHAIN"],
+		"CACHE_TYPE"	=>	$arParams["CACHE_TYPE"],
+		"CACHE_TIME"	=>	$arParams["CACHE_TIME"],
+		"CACHE_FILTER"	=>	$arParams["CACHE_FILTER"],
+		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+		"DISPLAY_TOP_PAGER"	=>	$arParams["DISPLAY_TOP_PAGER"],
+		"DISPLAY_BOTTOM_PAGER"	=>	$arParams["DISPLAY_BOTTOM_PAGER"],
+		"PAGER_TITLE"	=>	$arParams["PAGER_TITLE"],
+		"PAGER_TEMPLATE"	=>	$arParams["PAGER_TEMPLATE"],
+		"PAGER_SHOW_ALWAYS"	=>	$arParams["PAGER_SHOW_ALWAYS"],
+		"PAGER_DESC_NUMBERING"	=>	$arParams["PAGER_DESC_NUMBERING"],
+		"PAGER_DESC_NUMBERING_CACHE_TIME"	=>	$arParams["PAGER_DESC_NUMBERING_CACHE_TIME"],
+		"PAGER_SHOW_ALL" => $arParams["PAGER_SHOW_ALL"],
+		"DISPLAY_DATE"	=>	$arParams["DISPLAY_DATE"],
+		"DISPLAY_NAME"	=>	"Y",
+		"DISPLAY_PICTURE"	=>	$arParams["DISPLAY_PICTURE"],
+		"DISPLAY_PREVIEW_TEXT"	=>	$arParams["DISPLAY_PREVIEW_TEXT"],
+		"PREVIEW_TRUNCATE_LEN"	=>	$arParams["PREVIEW_TRUNCATE_LEN"],
+		"ACTIVE_DATE_FORMAT"	=>	$arParams["LIST_ACTIVE_DATE_FORMAT"],
+		"USE_PERMISSIONS"	=>	$arParams["USE_PERMISSIONS"],
+		"GROUP_PERMISSIONS"	=>	$arParams["GROUP_PERMISSIONS"],
+		"FILTER_NAME"	=>	$arParams["FILTER_NAME"],
+		"HIDE_LINK_WHEN_NO_DETAIL"	=>	$arParams["HIDE_LINK_WHEN_NO_DETAIL"],
+		"CHECK_DATES"	=>	$arParams["CHECK_DATES"],
+	),
+	$component
+);?>
+</div>

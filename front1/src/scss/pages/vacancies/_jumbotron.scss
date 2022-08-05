@@ -1,0 +1,140 @@
+.vacancies-page__jumbotron{
+  .vacancies-banner{
+    height: 450px;
+    padding-top: var(--space-md);
+    &__img {
+      display: none;
+    }
+    &__content {
+      padding-top: var(--space-xs);
+      padding-bottom: var(--space-xs);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+    }
+    &__text {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: var(--space-md);
+    }
+    &__description{
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: var(--space-lg);
+      p{
+        margin-bottom: 30px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__phone-link{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--white);
+      transition: .3s ease-in-out;
+      &:hover{
+        color: var(--red);
+      }
+    }
+    &__email-link{
+      margin-top: 12px;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration-line: underline;
+      color: var(--white);
+      transition: .3s ease-in-out;
+      &:hover{
+        color: var(--red);
+      }
+    }
+
+    @include tablet-up {
+      display: flex;
+
+      &__content {
+        width: 50%;
+        flex-shrink: 0;
+        flex-grow: 0;
+        align-items: flex-start;
+        text-align: left;
+        padding-bottom: calc(2 * var(--space-xs));
+      }
+
+      &__img {
+        width: 50%;
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: block;
+        position: relative;
+
+        img {
+          display: block;
+          position: absolute;
+
+          // lighthouse
+          right: 0;
+          bottom: var(--space-md);
+          max-height: calc(100% - 2 * var(--space-md));
+          width: auto;
+        }
+      }
+      &__text {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+    }
+
+    @include lg-tablet-up {
+      .btn {
+        height: 54px;
+        font-size: 17px;
+      }
+
+      &__text {
+        font-size: 42px;
+      }
+
+      &__content {
+        padding-bottom: 90px;
+        padding-top: 30px;
+      }
+    }
+
+    @include desktop-up {
+      &__img {
+        img {
+          left: 0;
+          margin: auto;
+        }
+      }
+    }
+    &__text{
+      margin-bottom: var(--space-md);
+    }
+    &__description{
+      max-width: 630px;
+    }
+    &__img{
+      margin-bottom: var(--space-lg);
+    }
+    @include lg-tablet-up-max{
+      .vacancies-banner__content{
+        padding-bottom: 45px;
+      }
+      .vacancies-banner__text{
+        font-size: 25px;
+      }
+    }
+  }
+}

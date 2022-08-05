@@ -1,0 +1,159 @@
+.vacancies-review{
+  background-color: var(--light-grey);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+  &__title{
+    font-weight: 500;
+    padding-left: 20px;
+    font-size: 38px;
+    line-height: 100%;
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+  }
+  &__wrap{
+    max-width: 894px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tns-ovh{
+    overflow: visible;
+  }
+  .tns-controls{
+    margin-top: 30px;
+    padding-left: 20px;
+    button{
+      &:first-child{
+        margin-right: 10px;
+      }
+    }
+  }
+  &-slider{
+
+  }
+  @include lg-tablet-up-max(){
+    &__title{
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+  }
+  @include tablet-up-max(){
+    &__title{
+      font-size: 25px;
+      margin-bottom: 32px;
+    }
+  }
+  @include lg-phone-up-max(){
+  }
+}
+
+.review-item{
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.3;
+  &.tns-slide-active{
+    transition: .3s ease-in-out;
+    opacity: 1;
+  }
+  &-wrap{
+    background-color: var(--white);
+    padding: 34px 40px 45px 40px;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__image{
+    width: 240px;
+    min-width: 240px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 55px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 120%;
+      color: var(--dark-blue);
+    }
+    &__position{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--black);
+    }
+    &__content{
+      p{
+        margin-top: 16px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: var(--black);
+      }
+    }
+  }
+  @include lg-tablet-up-max(){
+    &__image{
+      width: 180px;
+      min-width: 180px;
+      height: 180px;
+      margin-right: 26px;
+      img{
+      }
+    }
+    &__text{
+      &__title{
+        font-size: 15px;
+      }
+      &__position{
+        font-size: 13px;
+      }
+      &__content{
+        p{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  @include tablet-up-max(){
+    &-wrap{
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 30px;
+    }
+    &__image{
+      width: 120px;
+      min-width: 120px;
+      height: 120px;
+      margin-right: 0px;
+      margin-bottom: 22px;
+      img{
+      }
+    }
+    &__text{
+      &__title{
+        text-align: center;
+      }
+      &__position{
+        text-align: center;
+      }
+      &__content{
+        p{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  @include lg-phone-up-max(){
+  }
+}

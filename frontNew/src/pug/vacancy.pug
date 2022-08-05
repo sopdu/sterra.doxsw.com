@@ -1,0 +1,22 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .vacancy-page
+            +breadcrumb(['Главная ', ' / О компании', ' / Работа у нас'], ' / Инженер по тестированию ПО')
+            .vacancy-page-content
+                .container
+                    .content-with-sidebar.row
+                        .vacancy-content.col.col-12.col-md-8
+                            include pages/vacancy/vacancy-main
+                        .sidebar.col.col-12.col-md-4
+                            include pages/vacancy/vacancy-sidebar
+
+
+        include pages/vacancy/vacancy-form
+
+        include components/footer/index.pug

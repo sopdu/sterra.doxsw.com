@@ -1,0 +1,11 @@
+mixin superior(image, title, description)
+
+    .superior-item
+        .superior-item-wrap
+            .superior-item__img
+                svg
+                    use(href="./img/icons/icon-sprite.svg#" + image)
+            .superior-item__title !{title}
+            .superior-item__description !{description}
+
+

@@ -1,0 +1,16 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .awards-page
+            +breadcrumb(['Главная ', ' / О компании'], ' / Награды и благодарности — Награды')
+
+
+
+            include pages/awards/index
+
+        include components/footer/index.pug

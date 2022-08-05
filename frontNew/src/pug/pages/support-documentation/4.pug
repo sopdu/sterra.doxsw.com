@@ -1,0 +1,17 @@
+include ../../data/support-documentation-4
+.support-documentation-tab-4
+    .support-documentation-tab-4__wrap.home-faq
+        .home-faq__accordion
+
+            div.accordion#home-faq
+                for item in supportDocumentation4
+                    section.home-faq-item.accordion-item
+                        header.home-faq-item__header.accordion-item-header.accordion-trigger
+                            h2.home-faq-item__title= item.title
+                            .home-faq-item__state
+
+                        .accordion-item-panel
+                            for block in item.list
+                                a.support-documentation-tab-4__item(href="#")
+                                    .support-documentation-tab-4__item__title= block.title
+                                    .support-documentation-tab-4__item__description= block.description

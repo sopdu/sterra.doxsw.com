@@ -1,0 +1,16 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .press-web-item
+            main.page-main
+
+            +breadcrumb(['Главная ', ' / Пресс-центр — Вебинары'], ' / Версия 4.3. С-Терра Шлюз и С-Терра Шлюз DP. Функциональные возможности и нюансы эксплуатации')
+            
+            include pages/press-web-item/index
+
+        include components/footer/index.pug

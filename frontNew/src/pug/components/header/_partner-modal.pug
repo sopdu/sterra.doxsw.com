@@ -1,0 +1,57 @@
+<!-- Course FORM -->
+
+include ../../mixins/modal_long.pug
++modal-long('partner-modal')
+    h2.modal-title Стать партнером
+    .modal-subtitle Все поля обязательны для заполнения
+
+    form#partner-modal-form.partner-modal-form(action="./backend/question-form.json" method="GET")
+        .form-field
+            label.form-label(for="partner-name") ФИО
+            input#partner-name.form-control(name="name")
+        .form-field
+            label.form-label(for="partner-company") Название компании
+            input#partner-company.form-control(name="company")
+        .form-field
+            label.form-label(for="partner-company") Занимаемая должность
+            input#partner-position.form-control(name="position")
+        .row
+            .col.col-12.col-sm-6
+                .form-field
+                    label.form-label(for="partner-mail") Email
+                    input#partner-mail.form-control(name="email" inputmode="email")
+            .col.col-12.col-sm-6
+                .form-field
+                    label.form-label(for="partner-phone") Номер телефона
+                    input#partner-phone.form-control(data-mask="phone" inputmode="number" name="phone" placeholder="+7 (___) ___-__-__")
+        .row
+            .col.col-12.col-sm-6
+                .form-field
+                    label.form-label(for="partner-numberinn") ИНН
+                    input#partner-numberinn.form-control(name="numberinn")
+        .form-field
+            label.form-label Копия лицензии ФСБ
+            #drop-area-uploaded
+                .uploaded-item
+                    span
+                    +svg-icon('close-icon', 10, 10)
+            #drop-area
+                input.form-control-attachment#fileElem(type="file" name="attachment" placeholder="" )
+                .drop-area-description Перетяните резюме сюда или выберите файл для загрузки
+                label.btn.btn-primary-inverse(for="fileElem")
+                    .btn-icon
+                        +svg-icon('upload-icon', 18, 19)
+                    span Прикрепить файл
+        .form-field
+            label.form-label(for="partner-text") Дополнительная информация
+            textarea#partner-text.form-control(name="question")
+        .vacancy-form-footer
+            .form-field.course-modal-form__confirm
+                label.checkbox
+                    input#partner-agreement(type="checkbox" name="agreement")
+                    span.checkbox-box
+                    .checkbox-label Даю согласие на обработку своих персональных данных в соответствии с #[a(href="#") Политикой обработки персональных данных ООО «С-Терра СиЭсПи»].
+
+            button.btn.btn-primary.btn-block(type="submit") Отправить
+
+<!-- /Course FORM -->

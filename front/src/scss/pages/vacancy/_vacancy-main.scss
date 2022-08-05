@@ -1,0 +1,208 @@
+.vacancy-main{
+  display: flex;
+  flex-direction: column;
+  &__title{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 110%;
+    color: var(--dark-blue);
+    margin-bottom: 23px;
+  }
+  &__description{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &-item{
+      display: flex;
+      flex-direction: column;
+      margin-right: 40px;
+      &:last-child{
+        margin-right: 0;
+      }
+      .title{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--light-blue);
+        margin-bottom: 4px;
+      }
+      .value{
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 120%;
+        color: var(--black);
+      }
+    }
+  }
+  &__btn-group{
+    margin-top: 37px;
+    .btn{
+      margin-right: 18px;
+      height: 54px;
+      width: 165px;
+      font-size: 17px;
+      &:first-child{
+        width: 205px;
+      }
+    }
+
+  }
+  &__block{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 110%;
+      color: var(--dark-blue);
+      margin-bottom: 25px;
+    }
+    &__list{
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 10px;
+      li{
+        padding-left: 21px;
+        position: relative;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 140%;
+        color: var(--black);
+        margin-bottom: 11px;
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 8px;
+          height: 8px;
+          display: block;
+          background-color: var(--red);
+          border-radius: 100%;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__contacts{
+    margin-top: 60px;
+    width: 100%;
+    border: 1px solid var(--grey);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 50px 30px;
+    &__title{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light-blue);
+      margin-bottom: 15px;
+    }
+    &__phone-link{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 100%;
+      color: var(--blue);
+      margin-bottom: 10px;
+      text-decoration: none;
+      transition: .3s ease-in-out;
+      &:hover{
+        color: var(--red);
+      }
+    }
+    &__email-link{
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 100%;
+      text-decoration-line: underline;
+      color: var(--blue);
+      transition: .3s ease-in-out;
+      &:hover{
+        color: var(--red);
+      }
+    }
+  }
+  @include lg-tablet-up-max(){
+    &__title{
+      font-size: 32px;
+    }
+    &__description{
+      .title{
+        font-size: 11px;
+      }
+      .value{
+        font-size: 13px;
+      }
+    }
+    &__btn-group{
+      margin-top: 27px;
+      margin-bottom: 10px;
+    }
+    &__block{
+      margin-top: 30px;
+      &__title{
+        font-size: 20px;
+        margin-bottom: 19px;
+      }
+      ul{
+        li{
+          font-size: 13px;
+          margin-bottom: 9px;
+        }
+      }
+    }
+
+    &__contacts{
+      margin-top: 60px;
+      padding: 40px 30px 40px 30px;
+      &__title{
+        font-size: 11px;
+        margin-bottom: 12px;
+      }
+      &__phone-link{
+        font-size: 20px;
+      }
+      &__email-link{
+        font-size: 13px;
+      }
+    }
+  }
+  @include tablet-up-max(){
+    &__title{
+      font-size: 25px;
+    }
+  }
+  @include lg-phone-up-max(){
+    .vacancy-main__btn-group{
+      margin-bottom: 14px;
+      .btn{
+        margin-right: 0px;
+        padding-left: 26px;
+        padding-right: 26px;
+        font-size: 15px;
+        height: 42px;
+        &:first-child{
+          width: 171px;
+          margin-right: 10px;
+        }
+        &:last-child{
+          width: 135px;
+          margin-right: 0;
+        }
+      }
+    }
+    .vacancy-main__contacts{
+      margin-top: 47px;
+    }
+    &__block{
+      margin-top: 26px;
+    }
+  }
+}

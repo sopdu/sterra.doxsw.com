@@ -1,0 +1,24 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+
+        include components/header/index.pug
+        .industry-card-page
+
+            include pages/industry-card/jumbotron/index
+
+            .industry-card-clients
+                +breadcrumb(['Главная ', ' / Каталог — Отраслевые решения'], ' / Государственнй сектор')
+                include pages/industry-card/clients/index
+
+            include pages/industry-card/table/index
+            include pages/industry-card/accordion/index
+            include pages/industry-card/items/index
+
+
+            include pages/product-card/video-slider/index
+            include pages/catalog-compl/form/index
+
+        include components/footer/index.pug

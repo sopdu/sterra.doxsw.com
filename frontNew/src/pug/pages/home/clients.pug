@@ -1,0 +1,20 @@
+<!-- CLIENTS -->
+include ../../mixins/slider
+include ../../data/clients
+
+.home-clients
+  #clients-slider.scroll-slider
+    .scroll-slider-viewport
+      .scroll-slider-slides
+
+
+        each partner in partners
+          // SLIDE
+          .scroll-slider-slide.c-col-4.c-col-md-3.c-col-lg-2
+            a.card.client-block(href=partner.link target="_blank" rel="noopener noreferrer nofollow")
+              img.bw(src=partner.img alt=partner.alt)
+              img.colored(src=partner.coloredImg alt=partner.alt)
+
+    .container
+      +slider-controls()
+<!-- /CLIENTS -->

@@ -1,0 +1,152 @@
+@use 'sass:math';
+
+/* GRID
+* xs - lg-phone-up
+* sm - tablet-up (>=768px)
+* md - lg-tablet-up (>= 1024px)
+* lg - sm-desktop-up (>=1280px)
+*/
+
+@mixin grid-generator($prefix) {
+  .col#{$prefix} {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        width: math.div(100%, 12) * $i;
+      }
+    }
+    &-auto {
+      width: auto;
+      
+    }
+  }
+}
+
+:root {
+  --gap: var(--space-xs);
+
+  @include tablet-up {
+    --gap: var(--space-sm);
+  }
+
+  @include lg-tablet-up {
+    --gap: var(--space-unit);
+  }
+
+  --max-content-width: 1380px;
+  --viewport-width: calc(100vw - var(--scrollbar-width, 0));
+  --content-width: calc(min(var(--viewport-width), var(--max-content-width)) - 2 * var(--gap));
+  --content-side-offset: calc((100vw - var(--content-width)) / 2);
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(2 * var(--gap));
+  padding-right: calc(2 * var(--gap));
+  max-width: $maxContentWidth;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--gap));
+  margin-right: calc(-1 * var(--gap));
+}
+
+.col {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+
+@include grid-generator('');
+
+/* xs GRID: LG-PHONE-UP */
+@include lg-phone-up {
+  @include grid-generator('-xs');
+}
+
+/* sm GRID: TABLET-UP */
+@include tablet-up {
+  @include grid-generator('-sm');
+}
+
+/* md GRID: LG-TABLET-UP */
+@include lg-tablet-up {
+  @include grid-generator('-md');
+}
+
+/* lg GRID: DESKTOP-UP */
+@include sm-desktop-up {
+  @include grid-generator('-lg');
+}
+
+:root {
+  --c-columns-content-width: var(--content-width);
+
+  @include max-width-up {
+  }
+}
+
+@mixin generate-content-grid($prefix: null) {
+  $classPrefix: '';
+  @if ($prefix) {
+    $classPrefix: '-' + $prefix;
+  }
+
+  &#{$classPrefix} {
+    &-1 {
+      width: calc(var(--c-columns-content-width) / 12 * 1);
+    }
+    &-2 {
+      width: calc(var(--c-columns-content-width) / 12 * 2);
+    }
+    &-3 {
+      width: calc(var(--c-columns-content-width) / 12 * 3);
+    }
+    &-4 {
+      width: calc(var(--c-columns-content-width) / 12 * 4);
+    }
+    &-5 {
+      width: calc(var(--c-columns-content-width) / 12 * 5);
+    }
+    &-6 {
+      width: calc(var(--c-columns-content-width) / 12 * 6);
+    }
+    &-7 {
+      width: calc(var(--c-columns-content-width) / 12 * 7);
+    }
+    &-8 {
+      width: calc(var(--c-columns-content-width) / 12 * 8);
+    }
+    &-9 {
+      width: calc(var(--c-columns-content-width) / 12 * 9);
+    }
+    &-10 {
+      width: calc(var(--c-columns-content-width) / 12 * 10);
+    }
+    &-11 {
+      width: calc(var(--c-columns-content-width) / 12 * 11);
+    }
+    &-12 {
+      width: calc(var(--c-columns-content-width) / 12 * 12);
+    }
+  }
+}
+
+.c-col {
+  @include generate-content-grid();
+
+  @include tablet-up {
+    @include generate-content-grid(('sm'));
+  }
+
+  @include lg-tablet-up {
+    @include generate-content-grid(('md'));
+  }
+
+  @include sm-desktop-up {
+    @include generate-content-grid(('lg'));
+  }
+}

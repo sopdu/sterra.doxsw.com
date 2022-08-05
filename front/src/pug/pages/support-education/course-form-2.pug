@@ -1,0 +1,40 @@
+block content
+
+    .vacancy-form#vacancy-form
+        .container
+            .vacancy-form__content
+                .vacancy-form__title Записаться на курс
+                form.vacancy-form__element#vacant-form(action="./backend/contact-form.json" type="post" enctype="multipart/form-data")
+                    .form-field
+                        label.form-label ФИО*
+                        input.form-control(type="text" name="name")
+                    .form-field
+                        label.form-label Название компании*
+                        input.form-control(type="text" name="company")
+                    .vacancy-form-row
+                        .form-field
+                            label.form-label Email*
+                            input.form-control(type="text" name="email" placeholder="" )
+                        .form-field
+                            label.form-label Номер телефона
+                            input.form-control(data-mask="phone" type="text" name="phone" placeholder="+7(___)___-__-__" inputmode="number")
+
+                    .form-field
+                        label.form-label Название курса
+                        .custom-select
+                            select
+                                option(value="0") Курс
+                                option(selected) Курс 2. Защита сетевой инфраструктуры на основе продуктов С-Терра
+                                option 123
+                                option 123
+                    .form-field
+                        label.form-label Комментарий
+                        textarea.form-control(name="comment" placeholder="")
+
+                    .vacancy-form-footer
+                        .form-field
+                            label.checkbox
+                                input#question-agreement(type="checkbox" name="agreement")
+                                span.checkbox-box
+                                .checkbox-label Даю согласие на обработку своих персональных данных в соответствии с #[a(href="#") Политикой обработки персональных данных ООО «С-Терра СиЭсПи»].
+                        button.btn.btn-primary.btn-lg.btn-block(type="submit") Отправить

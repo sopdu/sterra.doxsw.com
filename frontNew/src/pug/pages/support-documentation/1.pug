@@ -1,0 +1,53 @@
+
+include ../../data/support-documentation-1
+.support-documentation-tab-1.form-js(data-full-length="50" data-page-size="12" data-action="./backend/support-1.json" data-method="GET")
+    .support-documentation-tab-1__top
+        .support-documentation-tab-1__top__selects
+
+            .custom-select
+                select.js-select
+                    option(value="0") Выбор версии
+                    option 123
+                    option 123
+                    option 123
+            .custom-select
+                select.js-select
+                    option(value="0") Версия
+                    option 123
+                    option 123
+                    option 123
+            .custom-select
+                select.js-select
+                    option(value="0") Кем выдан
+                    option 123
+                    option 123
+                    option 123
+
+
+        a.btn.btn-primary-inverse(href="#")
+            svg.btn-icon.desktop
+                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+            svg.btn-icon.mobile
+                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+            span Скачать все сертификаты
+    .support-documentation-tab-1__content.js-body
+        for item in supportDocumentation1
+            .support-documentation-tab-1__item.js-item
+                .support-documentation-tab-1__item__image
+                    img(src=item.image)
+                .support-documentation-tab-1__item__text
+                    .support-documentation-tab-1__item__text__title !{item.title}
+                    ul
+                        for li in item.list
+                            li !{li}
+
+                    button.btn.btn-primary-inverse
+                        svg.btn-icon.desktop
+                            use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                        svg.btn-icon.mobile
+                            use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                        span Скачать PDF
+
+    .vacancies-vacant__controll.js-control-text-support-documentation-3-show
+        .vacancies-vacant__controll__text.js-control-text.js-control-text-support-documentation-3 Показано 24 из 274
+        button.js-control-more.js-control-more-support-documentation-3.vacancies-vacant__controll__btn.btn.btn-primary-inverse Еще 24

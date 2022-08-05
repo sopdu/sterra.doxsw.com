@@ -1,0 +1,14 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .case-page.page-main
+            +breadcrumb(['Главная', ' / Партнеры', ' / Кейсы'], ' / «С-Терра СиЭсПи» и «Аквариус» заключили договор о сотрудничестве')
+            include pages/case/index
+            .bg-block
+                .home-page__form
+                    include pages/home/contact-form/index.pug
+
+        include components/footer/index.pug

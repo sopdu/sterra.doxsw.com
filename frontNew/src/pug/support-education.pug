@@ -1,0 +1,10 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+        include components/header/index.pug
+        .support-education-page.page-main.support-education-page-video
+            +breadcrumb(['Главная ', ' / Поддержка'] , ' / Обучение — Видеоуроки')
+            include pages/support-education/video
+        include components/footer/index.pug

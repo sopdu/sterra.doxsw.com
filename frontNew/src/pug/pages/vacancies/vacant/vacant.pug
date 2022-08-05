@@ -1,0 +1,39 @@
+
+include  ../../../data/vacant
+
+block content
+
+    .vacancies-vacant
+        .container
+            .vacancies-vacant__content.vacant(data-full-length="32" data-page-size="6" data-action="./backend/vacant-items.json" data-method="GET")
+                .vacancies-vacant__title Вакансии
+                .vacancies-vacant__top
+                    .vacancies-vacant__search
+                        .search-field.js-input-search-field
+                            .search-field__icon
+                                +svg-icon('search', 14, 14)
+                            input.js-input-search.form-control(value="" placeholder='Поиск' name="q" data-field autocomplete="off")
+                            button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                                +svg-icon('times', 10, 10)
+
+                        ul.search-list(data-list hidden)
+
+                    ul.vacancies-vacant__filter
+                        li.vacancies-vacant__filter__item
+                            button.js-control-item-button.vacancies-vacant__filter__button.active( data-type="" type="button") Все
+                        li.vacancies-vacant__filter__item
+                            button.js-control-item-button.vacancies-vacant__filter__button( data-type="1" type="button") Зеленоград
+                        li.vacancies-vacant__filter__item
+                            button.js-control-item-button.vacancies-vacant__filter__button( data-type="2" type="button") Москва
+                .vacancies-vacant__body.row
+                    each item in vacancies
+                        .js-item.col.col-12.col-sm-6.col-md-4
+                            a.vacancies-vacant__item(href="#")
+                                .vacancies-vacant__item__subtitle= item.subtitle
+                                .vacancies-vacant__item__title= item.title
+                                .vacancies-vacant__item__icon
+                                    +svg-icon(item.icon, 58, 44)
+
+                .vacancies-vacant__controll
+                    .vacancies-vacant__controll__text.js-control-text Показано 6 из 9
+                    button.js-control-more.vacancies-vacant__controll__btn.btn.btn-primary-inverse Еще 3

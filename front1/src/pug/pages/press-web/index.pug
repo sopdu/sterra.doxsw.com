@@ -1,0 +1,66 @@
+include  ../../data/pressweb
+
+block content
+    .container
+        .pressweb-page__content(data-full-length="1021" data-page-size="12" data-action="./backend/pressweb.json" data-method="GET")
+            .pressweb-page__content__top
+                .pressweb-page__title Пресс-центр
+                ul.pressweb-page__filter
+                    li.js-control-item.pressweb-page__filter__item
+                        button.js-control-item-button.pressweb-page__filter__button(type="button" data-type="1") Новости
+                    li.js-control-item.pressweb-page__filter__item
+                        button.js-control-item-button.pressweb-page__filter__button(type="button" data-type="2") Объявления
+                    li.js-control-item.pressweb-page__filter__item
+                        button.js-control-item-button.pressweb-page__filter__button(type="button" data-type="3") Мероприятия
+                    li.js-control-item.pressweb-page__filter__item
+                        button.js-control-item-button.pressweb-page__filter__button.active(type="button" data-type="4") Вебинары
+                    li.js-control-item.pressweb-page__filter__item
+                        button.js-control-item-button.pressweb-page__filter__button(type="button" data-type="5") Публикации
+
+            .pressweb-page__content__button.row.justify-content-between
+                .pressweb-page__select.col.col-12.col-sm-4.col-md-4
+                    .pressweb-page__selected 
+                        .pressweb-page__active 2022
+                        .controlls
+                            button.btn-primary-inverse.close
+                                +svg-icon('times', 10, 10)
+                            button.btn-primary-inverse
+                                +svg-icon('chevron-right', 10, 10)
+                    ul.pressweb-page__selects 
+                        li.js-control-item.pressweb-page__select__item
+                            button.js-control-item.pressweb-page__select_button(type="button" data-type="1") 2022
+                        li.js-control-item.pressweb-page__select__item
+                            button.js-control-item.pressweb-page__select_button(type="button" data-type="1") 2021
+                        li.js-control-item.pressweb-page__select__item
+                            button.js-control-item.pressweb-page__select_button(type="button" data-type="1") 2020
+                        li.js-control-item.pressweb-page__select__item
+                            button.js-control-item.pressweb-page__select_button(type="button" data-type="1") 2019
+
+                .pressweb-page__search.col.col-12.col-sm-7.col-md-8
+                        .search-field.js-input-search-field
+                            .search-field__icon
+                                +svg-icon('search', 14, 14)
+                            input.js-input-search.form-control(value="" placeholder='Поиск' name="q" data-field autocomplete="off")
+                            button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                                +svg-icon('times', 10, 10)
+
+                        ul.search-list(data-list hidden)
+
+            .pressweb-page__body.row
+                each item in pressweb
+                    .col.col-12.col-sm-6.col-md-4
+                        a.pressweb-page__item(href="#")
+                            img.pressweb-page__item__image(src=item.img)
+                            .pressweb-page__item__date= item.date
+                            .pressweb-page__item__title= item.title
+
+            .pressweb-page__controll
+                .pressweb-page__controll__text.js-control-text Показано 12 из 1021
+                button.js-control-more.pressweb-page__controll__btn.btn.btn-primary-inverse Еще 12
+
+            .pressweb-page__contacts
+                .pressweb-page__contacts__title Контакты отдела PR и рекламы
+                a.pressweb-page__contacts__phone-link(href="tel:+7 (499) 940-90-01") +7 (499) 940-90-01
+                a.pressweb-page__contacts__email-link(href="mailto:information@s-terra.ru") information@s-terra.ru
+
+                

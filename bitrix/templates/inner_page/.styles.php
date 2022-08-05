@@ -1,0 +1,5 @@
+<?
+return array (
+  'floating' => 'картинка',
+);
+?>

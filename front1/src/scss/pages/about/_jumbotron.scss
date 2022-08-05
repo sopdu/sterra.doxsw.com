@@ -1,0 +1,40 @@
+.about-page__jumbotron{
+  .home-banner{
+    height: 450px;
+    padding-top: var(--space-md);
+    &__content{
+
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+    }
+    &__text{
+      margin-bottom: var(--space-md);
+    }
+    &__description{
+      max-width: 630px;
+    }
+    &__img{
+      margin-bottom: var(--space-lg);
+    }
+  }
+  .btn-icon{
+    width: 20px;
+    height: 20px;
+  }
+  @include lg-phone-up-max(){
+    .home-banner{
+      height: 370px;
+      padding-top: 0;
+      padding-bottom: 26px;
+      &__text{
+        font-size: 25px;
+        margin-bottom: 14px;
+      }
+      &__description{
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

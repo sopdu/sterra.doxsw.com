@@ -1,0 +1,16 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+
+    .page
+
+        include components/header/index.pug
+        .press-news-item
+            main.page-main
+
+            +breadcrumb(['Главная ', ' / Пресс-центр — Новости'], ' / Решения С-Терра продемонстрированы на конференции «ИТ-Полигон»')
+
+            include pages/press-news-item/index
+
+        include components/footer/index.pug

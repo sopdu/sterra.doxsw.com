@@ -1,0 +1,120 @@
+.footer {
+  background: var(--primary);
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  font-size: 13px;
+  line-height: 1.4;
+  position: relative;
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &-contacts {
+    margin-bottom: 35px;
+
+    &__title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: var(--space-unit);
+      }
+    }
+
+    a {
+      color: inherit;
+      font-weight: 700;
+
+      &[href*='tel'] {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-apps {
+    margin-bottom: 35px;
+
+    .apps-list {
+      li {
+        position: relative;
+
+        a {
+          position: relative;
+          z-index: 2;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 1px;
+          bottom: 1px;
+          left: 3px;
+          right: 2px;
+          background: white;
+          z-index: 1;
+          border-radius: 50%;
+          opacity: 0;
+
+          transition: opacity 250ms ease-in-out;
+        }
+
+        &:hover:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__links {
+    font-size: 12px;
+
+    .footer-logo {
+      display: none;
+    }
+  }
+
+  &-link {
+    font-weight: 400;
+    font-size: 12px;
+    display: block;
+    color: inherit;
+    margin-bottom: var(--space-unit);
+  }
+
+  @include tablet-up {
+    padding-top: 50px;
+
+    &-contacts {
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__links {
+      order: 1;
+      .footer-logo {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__data {
+      order: 2;
+    }
+  }
+
+  @include sm-desktop-up {
+    padding-top: 57px;
+  }
+}

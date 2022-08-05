@@ -1,0 +1,65 @@
+.datepicker{
+  &-grid{
+    width: 260px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+  }
+  &-view{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    .dow{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      height: unset;
+    }
+    .days-of-week{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+  &-header{
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .datepicker-controls{
+      margin-top: 28px;
+      margin-bottom: 27px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button{
+        font-weight: 400;
+        background-color: #ffffff;
+        font-size: 12px;
+        height: 18px;
+        &:hover{
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  &-cell{
+    height: 32px;
+    line-height: 32px;
+    &.selected{
+      background-color: var(--blue);
+      border-radius: 100%;
+    }
+  }
+  &-view{
+    &.datepicker-grid{
+      .datepicker-cell{
+        height: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  .datepicker-cell.focused:not(.selected){
+    background-color: var(--blue);
+    border-radius: 100%;
+    color: #fff;
+  }
+}

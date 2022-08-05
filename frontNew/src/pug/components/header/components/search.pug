@@ -1,0 +1,17 @@
+<!-- SEARCH FORM -->
+
+include ../../../mixins/icon.pug
+
+// data-autocomplete - урл для подгрузки 10 результатов
+// action - урл для отправки формы (переход на страницу поиска)
+
+form.search(data-search data-autocomplete="./backend/search.json" action="./search-page" method="GET")
+  .search-field
+    .search-field__icon
+      +svg-icon('search', 14, 14)
+    input.form-control(value="" placeholder='Поиск' name="q" data-field autocomplete="off")
+    button.icon-btn.search-field__reset(type='button' data-reset)
+      +svg-icon('times-bold', 10, 10)
+
+  ul.search-list(data-list hidden)
+<!-- /SEARCH FORM -->

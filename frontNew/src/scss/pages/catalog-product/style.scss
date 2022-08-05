@@ -1,0 +1,61 @@
+@import "jumbotron";
+@import "catalog-block";
+@import "catalog-filters";
+
+
+
+.catalog-product-page{
+  .breadcrumb__list{
+    padding-bottom: 44px;
+  }
+  .catalog-block{
+    margin-bottom: 100px;
+  }
+  .catalog-compl-sertificates{
+    margin-bottom: 95px;
+  }
+  .catalog-description-block{
+    margin-bottom: 87px;
+  }
+  .catalog-form{
+    margin-bottom: 100px;
+  }
+  @include lg-tablet-up-max(){
+    .catalog-block{
+      margin-bottom: 67px;
+    }
+    .catalog-compl-sertificates{
+      margin-bottom: 61px;
+    }
+    .catalog-description-block{
+      margin-bottom: 69px;
+    }
+    .catalog-form{
+      margin-top: 78px;
+      margin-bottom: 80px;
+    }
+    .breadcrumb__list{
+      padding-bottom: 35px;
+    }
+    .catalog-compl-sertificates-2{
+      padding-bottom: 79px;
+    }
+  }
+  @include tablet-up-max(){
+  }
+  @include lg-phone-up-max(){
+    .breadcrumb__list{
+      padding-bottom: 33px;
+    }
+    .catalog-block{
+      margin-bottom: 84px;
+    }
+    .catalog-compl-sertificates{
+      margin-bottom: 82px;
+    }
+    .catalog-form{
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+  }
+}

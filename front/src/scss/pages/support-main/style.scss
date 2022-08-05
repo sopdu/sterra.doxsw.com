@@ -1,0 +1,26 @@
+@import "jumbotron";
+@import "description";
+@import "support-card";
+@import "accordion";
+@import "video-slider";
+
+
+.support-main-page{
+  .breadcrumb__list{
+    padding-bottom: 45px;
+  }
+}
+@media (max-width: 1020px){
+  .support-main-page{
+    .breadcrumb__list{
+      padding-bottom: 36px;
+    }
+  }
+}
+@media (max-width: 767px){
+  .support-main-page{
+    .breadcrumb__list{
+      padding-bottom: 26px;
+    }
+  }
+}

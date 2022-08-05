@@ -1,0 +1,280 @@
+
+
+block content
+
+    .catalog-block
+        .container
+            .catalog-block__content.js-catalog(data-full-length="32" data-page-size="10" data-page-size-mobile="5" data-action="./backend/catalog-product.json" data-method="GET")
+                .catalog-block__top
+                    .catalog-block__title Каталог
+                    ul.catalog-block__filter
+                        li.catalog-block__filter__item
+                            a.catalog-block__filter__button.active( data-type="" href="#") Продукты
+                        li.catalog-block__filter__item
+                            a.catalog-block__filter__button( data-type="1" href="#") Комплексные решения
+                        li.catalog-block__filter__item
+                            a.catalog-block__filter__button( data-type="2" href="#") Отраслевые решения
+                .catalog-block__grid
+                    .catalog-block__filter-col
+                        .catalog-block__filter-col__top
+                            button.btn.btn-primary-inverse.btn-mobile.btn-filter
+                                +svg-icon('filter-icon', 16,15)
+                                span Фильтр
+                            .catalog-block__filter-col__search
+                                .search-field.js-input-search-field
+                                    .search-field__icon
+                                        +svg-icon('search', 14, 14)
+                                    input.js-input-search.form-control(value="" placeholder='Поиск' name="q" data-field autocomplete="off" data-js-ref="catalog-filter-search")
+                                    button.js-input-search-clear.icon-btn.search-field__reset(type='button' data-reset)
+                                        +svg-icon('times', 10, 10)
+
+                        .catalog-block__filter-col__items
+                            .catalog-block__filter-col__items-block
+                                .catalog-block__filter-col__items-block__title Программные средства
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Клиент
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Клиент А
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+
+                            .catalog-block__filter-col__items-block
+                                .catalog-block__filter-col__items-block__title Шлюзы безопасности
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Шлюз
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Шлюз DP
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Юнит
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Виртуальный Шлюз
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра для Cisco
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") Криптомаршрутизатор ESR-ST
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Шлюз Е
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра Виртуальный Шлюз Е
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+
+
+                            .catalog-block__filter-col__items-block
+                                .catalog-block__filter-col__items-block__title Специальные решения
+                                .filter-dropdown.filter-dropdown-solo
+                                    a.filter-dropdown-title(href="#")
+                                        span С-Терра Клиент
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра СОВ
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+
+                            .catalog-block__filter-col__items-block
+                                .catalog-block__filter-col__items-block__title Система управления
+                                .filter-dropdown
+                                    .filter-dropdown-title
+                                        +svg-icon('arrow-filter', 12, 7)
+                                        a(href="") С-Терра КП
+                                    .filter-dropdown-container
+                                        a.filter-dropdown-item(href="#") Версия 4.3
+                                        a.filter-dropdown-item(href="#") Версия 4.2
+                                        a.filter-dropdown-item(href="#") Версия 4.1
+
+
+
+
+                        .catalog-block__filter-col__checkboxes
+                            .catalog-block__filter-col__checkboxes__item
+                                .catalog-block__filter-col__checkboxes__item__title Класс сертификации
+
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_1" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  КС1
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_2" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  КС2
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_3" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  КС3
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_4" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  МЭ А4 / Б4 4 ур. доверия
+
+                            .catalog-block__filter-col__checkboxes__item
+                                .catalog-block__filter-col__checkboxes__item__title Назначение
+
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_5" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  Корпоративная сеть
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_6" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  Удаленный доступ
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_7" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  Мобильный доступ
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_8" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  ЦОД, СХД, высокопроизводительные каналы
+                                .form-field
+                                    label.checkbox
+                                        input(type="checkbox" name="filter_9" data-js-ref="catalog-checkbox-filter")
+                                        .checkbox-box
+                                        .checkbox-label  Виртуальная среда
+                            .catalog-block__filter-col__checkboxes__buttons
+                                button.btn.btn-primary-inverse.js-clear-filters Сбросить
+                                button.btn.btn-primary.js-apply-filters Применить
+                    .catalog-block__items
+                        .catalog-block__items__choosen(data-js-ref="catalog-choosen-block")
+                            .catalog-block__items__choosen__wrap(data-js-ref="catalog-choosen-container")
+                                //.catalog-block__items__choosen-item
+                                //    span.catalog-block__items__choosen-item__text  КС1
+                                //    .catalog-block__items__choosen-item__close
+                                //        +svg-icon('chest-filter', 10, 10)
+                                //.catalog-block__items__choosen-item
+                                //    span.catalog-block__items__choosen-item__text  ЦОД, СХД, высокопроизводительные каналы
+                                //    .catalog-block__items__choosen-item__close
+                                //        +svg-icon('chest-filter', 10, 10)
+                                //.catalog-block__items__choosen-item
+                                //    span.catalog-block__items__choosen-item__text  Мобильный доступ
+                                //    .catalog-block__items__choosen-item__close
+                                //        +svg-icon('chest-filter', 10, 10)
+                                //.catalog-block__items__choosen-item
+                                //    span.catalog-block__items__choosen-item__text  Удаленный доступ
+                                //    .catalog-block__items__choosen-item__close
+                                //        +svg-icon('chest-filter', 10, 10)
+                            .catalog-block__items__choosen__clear(data-js-ref="catalog-choosen-clear") Сбросить все
+
+                        .catalog-block__items__wrap(data-js-ref="items-container")
+                            .catalog-block__items__item
+                                .catalog-block__items__item__wrap
+                                    .catalog-block__items__item__title С-Терра Клиент 4.3
+                                    .catalog-block__items__item__description Программный комплекс, предназначенный для защиты и фильтрации трафика с контролем состояния сессий для пользовательских...
+                                    .catalog-block__items__item__blocks
+                                        .catalog-block__items__item__block
+                                            .catalog-block__items__item__block__title Исполнения
+                                            .catalog-block__items__item__block__value С-Терра Клиент ST
+                                        .catalog-block__items__item__block
+                                            .catalog-block__items__item__block__title Классы сертификации СКЗИ
+                                            .catalog-block__items__item__block__value КС1, КС2
+                                    .catalog-block__items__item__footer
+                                        .catalog-block__items__item__footer__image
+                                            img(src="./img/industry-card/items/1.png")
+                                        a.btn.btn-primary-inverse(href="#") Подробнее
+
+
+
+                            .catalog-block__items__item
+                                .catalog-block__items__item__wrap
+                                    .catalog-block__items__item__title С-Терра Клиент 4.3
+                                    .catalog-block__items__item__description Программный комплекс, предназначенный для защиты и фильтрации трафика с контролем состояния сессий для пользовательских...
+                                    .catalog-block__items__item__blocks
+                                        .catalog-block__items__item__block
+                                            .catalog-block__items__item__block__title Исполнения
+                                            .catalog-block__items__item__block__value С-Терра Клиент ST
+                                        .catalog-block__items__item__block
+                                            .catalog-block__items__item__block__title Классы сертификации СКЗИ
+                                            .catalog-block__items__item__block__value КС1, КС2
+                                    .catalog-block__items__item__footer
+                                        .catalog-block__items__item__footer__image
+                                            img(src="./img/industry-card/items/1.png")
+                                        a.btn.btn-primary-inverse(href="#") Подробнее
+
+
+
+                            .catalog-block__items__item
+                                .catalog-block__items__item__wrap
+                                    .catalog-block__items__item__title С-Терра Клиент 4.3
+                                    .catalog-block__items__item__description Программный комплекс, предназначенный для защиты и фильтрации трафика с контролем состояния сессий для пользовательских...
+                                    .catalog-block__items__item__blocks
+                                        .catalog-block__items__item__block
+                                            .catalog-block__items__item__block__title Исполнения
+                                            .catalog-block__items__item__block__value С-Терра Клиент ST
+                                        .catalog-block__items__item__block
+                                            .catalog-block__items__item__block__title Классы сертификации СКЗИ
+                                            .catalog-block__items__item__block__value КС1, КС2
+                                    .catalog-block__items__item__footer
+                                        .catalog-block__items__item__footer__image
+                                            img(src="./img/industry-card/items/1.png")
+                                        a.btn.btn-primary-inverse(href="#") Подробнее
+
+
+                        .catalog-block__controll
+                            .catalog-block__controll__text.js-control-text
+                            button.js-control-more.catalog-block__controll__btn.btn.btn-primary-inverse

@@ -1,0 +1,44 @@
+.scroll-slider {
+  &-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+
+  &-slides {
+    display: flex;
+    margin-left: calc(-1 * var(--gap));
+    margin-right: calc(-1 * var(--gap));
+  }
+  &-slide {
+    flex-shrink: 0;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+    transition: opacity 400ms ease-in-out;
+
+    &:not(.active) {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &-controls {
+    margin-top: calc(2 * var(--space-sm));
+    margin-bottom: calc(-1 * var(--space-sm));
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-control {
+    margin-bottom: var(--space-sm);
+    &:not(:last-child) {
+      margin-right: var(--space-xs);
+    }
+  }
+  &-link {
+    margin-bottom: var(--space-sm);
+  }
+}

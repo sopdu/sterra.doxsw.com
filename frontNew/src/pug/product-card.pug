@@ -1,0 +1,23 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+include mixins/select.pug
+
+block content
+    .page
+
+        include components/header/index.pug
+        .product-card-page
+
+            include pages/product-card/jumbotron/index
+
+            +breadcrumb(['Главная ', ' / Каталог — Продукты'], ' / С-Терра Шлюз 4.3')
+
+            include pages/product-card/modifications/index
+            include pages/product-card/advantages/index
+            include pages/product-card/sert/index
+            include pages/product-card/tabs/tabs
+            include pages/product-card/video-slider/index
+            include pages/product-card/items-slider/index
+            include pages/catalog-compl/form/index
+
+        include components/footer/index.pug

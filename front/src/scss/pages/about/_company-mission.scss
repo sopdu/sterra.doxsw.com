@@ -1,0 +1,118 @@
+.company-mission{
+
+  &__block{
+    max-width: 854px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--blue);
+    padding: 40px 40px 55px 40px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--white);
+    margin-bottom: 13px;
+  }
+  &__description{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+    color: var(--white);
+  }
+  &-wrap{
+    margin-top: 38px;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__img{
+    min-width: 240px;
+    width: 240px;
+    margin-right: 45px;
+    img{
+      max-width: 100%;
+    }
+  }
+  &-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 120%;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    &__description{
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 140%;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    &__list{
+      list-style: none;
+      padding-left: 0;
+      &-item{
+        padding-left: 21px;
+        position: relative;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 140%;
+        color: var(--white);
+        margin-bottom: 11px;
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 8px;
+          height: 8px;
+          display: block;
+          background-color: var(--red);
+          border-radius: 100%;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include lg-tablet-up-max(){
+    &__title{
+      font-size: 20px;
+    }
+    &__description{
+      font-size: 13px;
+    }
+    &-wrap{
+      margin-top: 50px;
+    }
+    &-content{
+      &__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &__description{
+        font-size: 13px;
+      }
+      &__list{
+        &-item{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  @include tablet-up-max(){
+    &__img{
+      display: none;
+    }
+  }
+  @include lg-phone-up-max(){
+    &-wrap{
+      margin-top: 25px;
+    }
+  }
+}

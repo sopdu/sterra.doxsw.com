@@ -1,0 +1,37 @@
+<!-- SOLUTIONS -->
+
+include ../../mixins/slider
+include ../../data/solutions
+
+section.home-solutions
+  .container
+    header.home-solutions__header
+      h2.h1.home-solutions__title Наши решения
+      ul.slider-filters
+        li.slider-filters__item
+          button.slider-filter.active(type="button") Все
+        li.slider-filters__item
+          button.slider-filter(type="button" data-type="complex") Комплексные
+        li.slider-filters__item
+          button.slider-filter(type="button" data-type="sector") Отраслевые
+
+  #solutions-slider.scroll-slider
+    .scroll-slider-viewport
+      .scroll-slider-slides
+
+        each solution in solutions
+          // SLIDE
+          section.scroll-slider-slide.c-col-6.c-col-lg-4
+            a.home-solution.card(href=solution.link data-type=solution.type)
+              .home-solution__group #{solution.type === 'complex' ? 'Комплексное решение' : 'Отраслевое решение'}
+              h3.home-solution__title !{solution.title}
+              .home-solution__icon
+                img(src=solution.icon alt="")
+
+    .container
+      +slider-controls({
+        link: '#',
+        name: 'Каталог решений'
+      })
+
+<!-- /SOLUTIONS -->

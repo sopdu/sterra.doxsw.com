@@ -1,0 +1,125 @@
+.select-box {
+  position: relative;
+  width: 140px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--white);
+
+  &__current {
+    position: relative;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      & + .select-box__list {
+        opacity: 1;
+
+        // We have to set "animation-name: none;" to make the list visible (read below how it works)
+
+        animation-name: none;
+
+        .select-box__option {
+          cursor: pointer;
+        }
+      }
+
+      .select-box__icon {
+        svg{
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 60%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    opacity: 1;
+    transition: 0.2s ease;
+    svg{
+      transform: translateY(-50%)
+    }
+
+
+  }
+
+  &__value {
+    display: flex;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .select-box__input-text {
+      display: block;
+    }
+  }
+
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__list {
+    background-color: #fff;
+    position: absolute;
+    width: 185px;
+    left: -30px;
+    list-style: none;
+    margin-top: 10px;
+    opacity: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  }
+
+  &__option {
+    display: block;
+    background-color: #fff;
+    font-weight: 400;
+    span{
+      width: calc(100% - 20px);
+      border-radius: 100px;
+      font-size: 14px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 22px;
+      margin-left: 10px;
+      display: block;
+      line-height: 230%;
+      color: #1E1D85;
+    }
+    &:hover,
+    &:focus {
+      color: #1E1D85;
+      span{
+        background-color: #F6F6FF;
+        color: #1E1D85;
+
+      }
+    }
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

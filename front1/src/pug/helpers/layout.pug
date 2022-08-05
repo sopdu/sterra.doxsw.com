@@ -1,0 +1,32 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title
+      block title
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    link(href="./plugins/TinySlider/tiny-slider.css" rel="stylesheet")
+    link(href="./plugins/datepicker.css" rel="stylesheet")
+    link(href="./plugins/plyr/plyr.css" rel="stylesheet")
+    link(href="./css/style.css" rel="stylesheet")
+
+    block head
+  body
+    include sprite.html
+
+    block content
+
+    include ../components/success-modal/index.pug
+
+
+    block foot
+
+    script(src="./plugins/TinySlider/min/tiny-slider.js" )
+    script(src="./plugins/datepicker.js" )
+    script(src="./plugins/plyr/plyr.js" )
+    script(src="./js/script.js" )

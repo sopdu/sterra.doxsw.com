@@ -1,0 +1,37 @@
+.partner-superior{
+  .superior-title{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    color: #000066;
+    margin-bottom: 32px;
+  }
+  .superior-item__description {
+    line-height: 145%;
+  }
+}
+
+@media (max-width: 1024px){
+  .partner-superior{
+    .superior-title{
+      display: none;
+    }
+    .superior-item__description {
+    }
+    .superior-item__title{
+      font-size: 15px;
+      line-height: 120%;
+      margin-bottom: 10px;
+    }
+    .superior-item__description{
+      font-size: 13px;
+      line-height: 140%;
+    }
+    .superior-item-wrap{
+      height: 370px;
+    }
+    .tns-controls{
+      margin-top: 30px;
+    }
+  }
+}

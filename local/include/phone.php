@@ -1,0 +1,1 @@
+<a class="pressnews-page__contacts__phone-link" href="tel:+7 (499) 940-90-01">+7 (499) 940-90-01</a>

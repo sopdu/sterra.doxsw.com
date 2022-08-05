@@ -1,0 +1,327 @@
+/********** PRESS NEWS PAGE **********/
+html, body, .page {
+    height: 100%;
+}
+
+.press-mark .breadcrumb {
+    margin-top: var(--header-height);
+}
+.press-mark .breadcrumb__list {
+    padding-top: 28px;
+    padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+    .press-mark .breadcrumb__list {
+        padding-bottom: 32px;
+    }
+}
+
+.pressmark-page__body {
+    margin-bottom: 0px;
+}
+.pressmark-page__title {
+    margin-bottom: 41px;
+    margin-right: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 120%;
+    color: var(--dark-blue);
+}
+.pressmark-page .js-item {
+    padding-top: var(--gap);
+    padding-bottom: var(--gap);
+    display: flex;
+}
+.pressmark-page__content__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pressmark-page__content .btn {
+    padding: 0px 27px;
+}
+.pressmark-page__content .btn .btn-icon {
+    margin-right: 12px !important;
+}
+.pressmark-page__filter {
+    display: flex;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.pressmark-page__filter__item {
+    display: flex;
+    align-items: center;
+}
+.pressmark-page__filter__item:not(:last-child) {
+    margin-right: var(--space-unit);
+}
+.pressmark-page__filter__button {
+    border: none;
+    outline: none;
+    font: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 1;
+    cursor: pointer;
+    background: transparent;
+    color: var(--primary);
+    transition: color 250ms linear;
+}
+.pressmark-page__filter__button:hover {
+    text-decoration: none;
+}
+.pressmark-page__filter__button:hover {
+    color: var(--primary-dark);
+}
+.pressmark-page__filter__button.active {
+    color: var(--accent);
+}
+/*.pressmark-page__filter__button.active:hover {
+    color: var(--accent-dark);
+}*/
+.pressmark-page__filter__button.active:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: var(--space-xs);
+    background: currentColor;
+}
+@media (min-width: 1024px) {
+    .pressmark-page__filter {
+        font-size: 17px;
+    }
+    .pressmark-page__filter__item:not(:last-child) {
+        margin-right: calc(2.02 * var(--space-unit));
+    }
+}
+.pressmark-page__content__button {
+    justify-content: space-between;
+    margin-bottom: 39px;
+    align-items: center;
+}
+.pressmark-page__item {
+    margin-bottom: 41px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid #DEDEF4;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px 27px;
+}
+.pressmark-page__image {
+    width: 99px;
+    height: auto;
+    margin-right: 22px;
+    height: 140px;
+    display: flex;
+}
+.pressmark-page__image img {
+    min-width: 99px;
+    height: auto;
+    object-fit: cover;
+}
+
+.corp .pressmark-page__image{
+    width: 140px;
+}
+
+.corp .pressmark-page__image img{
+    min-width: 140px;
+}
+
+.pressmark-page__controll {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.pressmark-page__controll__text {
+    margin-right: 29px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+    color: #000000;
+}
+.pressmark-page__controll__btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--primary);
+    padding: 0px 31px;
+}
+.pressmark-page__content .btn {
+    font-size: 15px;
+    margin: 0;
+    height: 42px;
+}
+.pressmark-page__content .btn .btn-icon {
+    margin-right: 15px;
+}
+.pressmark-page__item__date {
+    margin-bottom: 21px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7373BA;
+}
+.pressmark-page__item__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: #000066;
+    margin-bottom: 4px;
+}
+@media (max-width: 768px) {
+    .pressmark-page__title {
+        font-size: 32px;
+        margin-bottom: 27px;
+    }
+    .pressmark-page__filter {
+        margin-bottom: 31px;
+    }
+    .pressmark-page__item__image {
+        width: 100%;
+        height: auto;
+    }
+    .pressmark-page__item__date {
+        font-size: 11px;
+        margin-bottom: 14px;
+    }
+    .pressmark-page__item__title {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .pressmark-page__item__text {
+        font-size: 13px;
+    }
+    .pressmark-page__contacts {
+        max-width: inherit;
+        width: 100%;
+    }
+    .pressmark-page__contacts__title {
+        font-size: 11px;
+    }
+    .pressmark-page__contacts__phone-link {
+        font-size: 20px;
+    }
+    .pressmark-page__contacts__email-link {
+        font-size: 13px;
+    }
+    .pressmark-page .breadcrumb span {
+        font-size: 11px;
+    }
+    .pressmark-page .press-news .breadcrumb__list {
+        padding-bottom: 33px;
+    }
+    .pressmark-page .pressnews-page__filter__item:not(:last-child) {
+        margin-right: 21px;
+    }
+    .pressmark-page__selected {
+        padding: 10px 14px 10px 19px;
+    }
+    .pressmark-page__content__button {
+        margin-bottom: 41px;
+    }
+    .pressmark-page__contacts {
+        margin-top: 60px;
+    }
+    .pressmark-page__item__title {
+        margin-bottom: 5px;
+    }
+    .pressmark-page__item__date {
+        margin-bottom: 23px;
+    }
+}
+@media (max-width: 479px) {
+    .pressmark-page__contacts {
+        width: 100%;
+        min-width: inherit;
+    }
+    .pressmark-page__filter {
+        flex-wrap: wrap;
+    }
+    .pressmark-page .press-news .breadcrumb__list {
+        padding-top: 16px;
+        padding-bottom: 26px;
+    }
+    .pressmark-page__title {
+        font-size: 25px;
+        margin-right: 0px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .pressmark-page__filter__item {
+        margin-bottom: 10px;
+    }
+    .pressmark-page__filter {
+        margin-bottom: 16px;
+    }
+    .pressmark-page__content__button {
+        margin-bottom: 26px;
+    }
+    .pressmark-page__select {
+        margin-bottom: 25px;
+    }
+    .pressmark-page__selects {
+        top: 41px;
+        width: 94%;
+    }
+    .pressmark-page__item__image {
+        margin-bottom: 24px;
+    }
+    .pressmark-page__item {
+        margin-bottom: 40px;
+        padding-bottom: 60px;
+    }
+    .pressmark-page__controll {
+        margin-top: 25px;
+    }
+    .pressmark-page__content {
+        margin-bottom: 80px;
+    }
+    .pressmark-page__contacts__title {
+        margin-bottom: 12px;
+    }
+    .pressmark-page__item {
+        flex-flow: column;
+    }
+    .pressmark-page__image {
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+        margin-bottom: 26px;
+    }
+    .pressmark-page__image img {
+        width: 99px;
+        margin-bottom: 0;
+    }
+
+    .corp .pressmark-page__image img{
+        min-width: 140px;
+    }
+
+    .pressmark-page__content {
+        margin-bottom: 0;
+    }
+}
+
+/********** /PRESS NEWS PAGE **********/

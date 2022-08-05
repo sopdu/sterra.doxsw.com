@@ -1,0 +1,62 @@
+block content
+
+    main.product-card-jumbotron.page-main
+        .bg-block
+            .jumbotron
+                .container
+                    .product-card-jumbotron__wrap
+                        .product-card-jumbotron__text
+                            .product-card-jumbotron__text__icon
+                                img(src="./img/product-card/main.svg")
+                            .product-card-jumbotron__text__icon__mobile
+                                img(src="./img/product-card/main-mob.svg")
+                            .product-card-jumbotron__text__content
+                                .product-card-jumbotron__text__title
+                                    span.product-card-jumbotron__text__title__main С-Терра Шлюз
+                                    .product-card-jumbotron__text__title-select
+                                        +select-box('Версия 4.3', [
+                                            {name: 'Версия 4.2', href: '#',value: '1'},
+                                            {name: 'Версия 4.3', href: '#',value: '2', checked: true},
+                                            {name: 'Версия 4.4', href: '#',value: '3'}
+                                        ])
+                                    //.product-card-jumbotron__text__title-select Версия 4.3
+                                    //    +svg-icon('arrow', 12, 7)
+                                .product-card-jumbotron__text__description Программно-аппаратный комплекс для обеспечения сетевой безопасности корпоративной сети любой топологии, с любым количеством туннелей.
+                                .product-card-jumbotron__text__items
+                                    .product-card-jumbotron__text__item
+                                        .product-card-jumbotron__text__item__title Исполнения
+                                        .product-card-jumbotron__text__item__value С-Терра Шлюз ST
+                                    .product-card-jumbotron__text__item
+                                        .product-card-jumbotron__text__item__title Классы сертификации СКЗИ
+                                        .product-card-jumbotron__text__item__value КС1, КС2, KC3
+                                .product-card-jumbotron__text__buttons.btn-dekstop
+                                    button.btn.btn-accent.btn-lg Оставить заявку
+                                    button.btn.btn-lg.btn-white Прайс-лист
+                        .product-card-jumbotron__description
+                            .product-card-jumbotron__description__item
+                                .product-card-jumbotron__description__icon
+                                    +svg-icon('product-description-1', 57,33)
+                                .product-card-jumbotron__description__text
+                                    .product-card-jumbotron__description__title IKE / IPSEC с ГОСТ
+                                    .product-card-jumbotron__description__text согласно RFC и ТК26
+                            .product-card-jumbotron__description__item
+                                .product-card-jumbotron__description__icon
+                                    +svg-icon('product-description-2', 44,44)
+                                .product-card-jumbotron__description__text
+                                    .product-card-jumbotron__description__title Гарантия 3 года
+                                    .product-card-jumbotron__description__text на аппаратную платформу
+                            .product-card-jumbotron__description__item
+                                .product-card-jumbotron__description__icon
+                                    +svg-icon('product-description-3', 48,41)
+                                .product-card-jumbotron__description__text
+                                    .product-card-jumbotron__description__title Бесплатная техподдержка
+                                    .product-card-jumbotron__description__text в первый год
+                            .product-card-jumbotron__description__item
+                                .product-card-jumbotron__description__icon
+                                    img(src="./img/product-card/icons/product-card-description-4.png ")
+                                .product-card-jumbotron__description__text
+                                    .product-card-jumbotron__description__title Продукт зарегистрирован
+                                    .product-card-jumbotron__description__text в реестре Российского ПО
+                        .product-card-jumbotron__text__buttons.btn-mobile
+                            button.btn.btn-accent.btn-lg Заявка
+                            button.btn.btn-lg.btn-white Прайс-лист

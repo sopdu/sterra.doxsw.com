@@ -1,0 +1,26 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block head
+    link(href="./plugins/photoswipe/photoswipe.css" rel="stylesheet")
+    link(href="./plugins/photoswipe/default-skin/default-skin.css" rel="stylesheet")
+
+
+block content
+
+    .page.fix-100-vh
+
+        include components/header/index.pug
+        .awards-item-page.awards-item-solo-page
+            +breadcrumb(['Главная ', ' / О компании', ' / Награды и благодарности — Награды'], ' / Награда и диплом по итогам Infosecurity Russia 2015')
+
+            include pages/awards-item/index-solo
+
+        include components/footer/index.pug
+
+
+block foot
+    include helpers/photoswipe-root.html
+    script(src="./plugins/photoswipe/photoswipe.min.js" )
+    script(src="./plugins/photoswipe/photoswipe-ui-default.min.js" )
+

@@ -1,0 +1,1 @@
+<p>Прайс-лист предоставляется по запросу: <a href="tel:+74999409061" class="phone-link">+7 499 940-90-61</a> или по почте <a href="mailto:sales@s-terra.ru" class="email-link">sales@s-terra.ru</a>.</p>

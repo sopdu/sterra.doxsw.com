@@ -1,0 +1,26 @@
+// Элемент списка (может быть со вложенным списком)
+
+mixin list-item(item, level = -1, currentLevel = 1)
+  li(data-level=currentLevel class=item.active && 'active')
+    a(href=item.link)= item.name
+    if item.items && (level < 1 || level >= currentLevel)
+      ul(class=item.class)
+        each subItem in item.items
+          +list-item(subItem, level, currentLevel + 1)
+
+// Секция меню в плашке на мобильных
+
+mixin menu-section(item)
+  include ../../mixins/icon.pug
+
+  section.header-menu-section(data-section=item.id)
+    header.header-menu-section__header
+      a.header-menu-section__title(href=item.link)= item.name
+      if item.items
+        button.icon-btn.header-menu-section__toggler
+          +svg-icon('chevron-bottom', 12, 7)
+    if item.items
+      .header-menu-section__items
+        ul
+          each subItem in item.items
+            +list-item(subItem)

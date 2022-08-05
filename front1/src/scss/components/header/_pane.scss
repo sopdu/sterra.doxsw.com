@@ -1,0 +1,83 @@
+.header-pane {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transition-property: opacity, visibility;
+  transition-timing-function: ease-in-out;
+  transition-duration: 400ms;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  z-index: $headerPaneZIndex;
+
+  &[hidden] {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+  }
+
+  &__content {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-lg);
+
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    background: var(--white);
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 102, 0.15);
+  }
+
+  &__search {
+    margin-bottom: 30px;
+  }
+
+  .search {
+    &-list {
+      left: calc(-2 * var(--gap));
+      right: calc(-2 * var(--gap));
+    }
+  }
+
+  &__contacts {
+    margin-top: 40px;
+  }
+
+  @include sm-desktop-up {
+    display: none !important;
+  }
+
+  @include tablet-up {
+    &__content {
+      padding-top: 35px;
+    }
+    &__search {
+      display: none;
+    }
+    &__contacts {
+      display: none;
+    }
+    .header-menu {
+      &-section {
+        &[data-section="account"] {
+          display: none;
+        }
+      }
+    }
+  }
+}

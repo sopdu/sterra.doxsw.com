@@ -1,0 +1,1 @@
+<a class="pressnews-page__contacts__email-link" href="mailto:sales@s-terra.ru">sales@s-terra.ru</a>

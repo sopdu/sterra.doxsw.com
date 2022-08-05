@@ -1,0 +1,118 @@
+.home-faq {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  .home-faq-item {
+    border: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition-property: padding-top, padding-bottom;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    margin: 0;
+
+    &:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__title {
+      font-size: 17px;
+      font-weight: 500;
+      flex-grow: 1;
+    }
+
+    &__content {
+      padding-top: 16px;
+      padding-right: 35px;
+      line-height: 1.4;
+    }
+
+    &__state {
+      width: 18px;
+      height: 18px;
+      margin-left: var(--space-md);
+      position: relative;
+      color: var(--primary);
+      align-self: center;
+      transition: color 400ms ease-in-out, align-self 400ms ease-in-out;
+      flex-shrink: 0;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: currentColor;
+        border-radius: 5px;
+      }
+
+      &:before {
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -1px;
+        height: 2px;
+      }
+
+      &:after {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+        width: 2px;
+        transition: opacity 250ms ease-in-out;
+      }
+    }
+
+    &.active {
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      .home-faq-item {
+        &__state {
+          align-self: flex-end;
+          color: var(--accent);
+          &:after {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet-up {
+    .home-faq-item {
+      &__title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include lg-tablet-up {
+    &__title {
+      margin-bottom: 40px;
+    }
+    .home-faq-item {
+      &__title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @include sm-desktop-up {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @include desktop-up {
+    .container {
+      max-width: 855px;
+    }
+  }
+}

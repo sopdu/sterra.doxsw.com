@@ -1,0 +1,18 @@
+div.login-form .exit_form input[type=submit]{
+
+	height: 28px;
+	width: 50px;
+	border: none;
+	padding: 0px 67px 0px 13px;
+	position: ralative;
+	border-radius: 0px 50px 50px 0px;
+	-webkit-border-radius: 0px 50px 50px 0px;
+	-moz-border-radius: 0px 50px 50px 0px;
+	behavior: url('/bitrix/templates/index/css/js/PIE.htc');
+	cursor: pointer;
+	color: #fff;
+	font-size: 14px;
+	float: right;
+	margin-top: -30px;
+	margin-right: 20px
+}

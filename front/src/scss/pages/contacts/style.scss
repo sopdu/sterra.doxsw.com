@@ -1,0 +1,39 @@
+@import "main";
+@import "form";
+
+.contacts-page{
+  .mobile{
+    display: none;
+  }
+  .tablet{
+    display: none;
+  }
+  .desktop{
+  }
+}
+@media (max-width: 1140px){
+  .contacts-page{
+    .mobile{
+      display: none;
+    }
+    .tablet{
+      display: block;
+    }
+    .desktop{
+      display: none;
+    }
+  }
+}
+@media (max-width: 767px){
+  .contacts-page{
+    .tablet{
+      display: none;
+    }
+    .mobile{
+      display: block;
+    }
+    .desktop{
+      display: none;
+    }
+  }
+}

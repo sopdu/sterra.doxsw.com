@@ -1,0 +1,16 @@
+<!-- STATS -->
+
+include ../../data/stats
+
+.home-stats
+  .container
+    .home-stats__wrapper
+
+      each item, ind in stats
+
+        .home-stat(data-index=ind + 1)
+          .home-stat__bullet
+          .home-stat__value= item.value
+          .home-stat__text !{item.text}
+
+<!-- /STATS -->

@@ -1,0 +1,37 @@
+
+include ../../data/support-documentation-3
+.support-documentation-tab-3
+    .support-documentation-tab-3__top
+
+        .custom-select
+            select
+                option(value="0") Выберите продукт
+                option 123
+                option 123
+                option 123
+
+        a.btn.btn-primary-inverse(href="#")
+            svg.btn-icon.desktop
+                use(href="./img/icons/icon-sprite.svg#download-arrow")
+            svg.btn-icon.mobile
+                use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+            span Скачать все ZIP
+
+    .support-documentation-tab-3__content
+        for item in supportDocumentation3
+            .support-documentation-tab-3__item
+                .support-documentation-tab-3__item__image
+                    img(src=item.image)
+                .support-documentation-tab-3__item__text
+                    .support-documentation-tab-3__item__text__title= item.title
+                    .support-documentation-tab-3__item__text__subtitle= item.subtitle
+                    .support-documentation-tab-3__item__text__description
+                        ul
+                            for li in item.list
+                                li !{li}
+                    a.btn.btn-primary-inverse(href="#")
+                        svg.btn-icon.desktop
+                            use(href="./img/icons/icon-sprite.svg#download-arrow")
+                        svg.btn-icon.mobile
+                            use(href="./img/icons/icon-sprite.svg#download-arrow-mobile")
+                        span Скачать PDF

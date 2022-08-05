@@ -1,0 +1,29 @@
+
+include  ../../../data/catalog-ind
+
+block content
+
+    .catalog-block
+        .container
+            .catalog-block__content.js-catalog(data-full-length="4" data-page-size="9" data-page-size-mobile="5"  data-action="./backend/catalog-ind-item.json" data-method="GET")
+                .catalog-block__top
+                    .catalog-block__title Каталог
+                    ul.catalog-block__filter
+                        li.catalog-block__filter__item
+                            a.catalog-block__filter__button( data-type="" href="#") Продукты
+                        li.catalog-block__filter__item
+                            a.catalog-block__filter__button( data-type="1" href="#") Комплексные решения
+                        li.catalog-block__filter__item
+                            a.catalog-block__filter__button.active( data-type="2" href="#") Отраслевые решения
+                .catalog-block__body.row
+                    each item in catalogCompl
+                        .js-item.col.col-12.col-sm-6.col-md-4
+                            a.catalog-block__item(href="#")
+                                .catalog-block__item__title= item.title
+                                .catalog-block__item__description= item.description
+                                .catalog-block__item__icon
+                                    +svg-icon(item.icon, item.iwidth, item.iheight)
+
+                .catalog-block__controll
+                    .catalog-block__controll__text.js-control-text
+                    button.js-control-more.catalog-block__controll__btn.btn.btn-primary-inverse

@@ -1,0 +1,24 @@
+extends helpers/layout.pug
+include components/breadcrumbs/index.pug
+
+block content
+    .page
+
+        include components/header/index.pug
+        .complex-card-page
+
+            include pages/complex-card/jumbotron/index
+
+            +breadcrumb(['Главная ', ' / Каталог — Комплексные решения'], ' / Защита удаленного доступа')
+
+
+            include pages/complex-card/description
+            include pages/complex-card/accordion/index
+
+            include pages/industry-card/items/index
+
+
+            include pages/product-card/video-slider/index
+            include pages/catalog-compl/form/index
+
+        include components/footer/index.pug

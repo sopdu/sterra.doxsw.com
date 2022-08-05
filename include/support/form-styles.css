@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+#OtherCase {
+	display: none;
+}
+.atcivation input[type="submit"][disabled] {
+	background-color: grey;
+}
+.atcivation input[type=submit][disabled]:hover{
+	background-color: grey;
+}
+
+.atcivation input[type=submit] {
+	font-size: 14px;
+	color: #fff;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	background-position: 135px 5px;
+}
+.textarea {
+	margin-top: 5px;
+}
+.jq-radio, .jq-radio checked {
+	margin-top: 4px;
+}
+.smile {
+	margin: 20px;
+	display: block;
+	font-size: 12px;
+	color: red;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+}
+.smile img {
+	margin-bottom:3px;
+}
+.smile input {
+	margin-top: 6px;
+}
+.pageform div p {
+	padding: 0px 0px 24px 5px;
+	margin-top: 5px;
+}
+.pageform div select{
+	width: 262px;
+	height: 28px;
+	padding: 0px 10px 0px 10px;
+	margin-top: 4px;
+	border: 1px solid #dcdcdc;
+	border-radius: 2px;
+	font-style: italic;
+	color: #535353;
+	padding-left: 6px;
+	background-color: white;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	cursor: auto;
+}
+

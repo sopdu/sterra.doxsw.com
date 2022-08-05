@@ -1,0 +1,32 @@
+
+block content
+    .container
+        .row.pressactual-item-page
+            .col.col-12.col-sm-12.col-md-8
+                .pressactual-item-page__header
+                    .pressactual-item-page__title Изменение прайс-листа 16.02.2021
+                    .pressactual-item-page__block
+                        .pressactual-item-page__date 31 мая 2021 
+                        .pressactual-item-page__category Объявление
+                
+                .pressactual-item-page__text-block__content
+                    p 16 февраля 2021 года обновляются прайс-листы на продукты С-Терра версий 4.2 и 4.3.
+                    p Обращаем ваше внимание на изменение артикулов на оборудование С-Терра, которое осуществляется вследствие оптимизации модельного ряда и увеличения производительности основных моделей С-Терра Шлюз.
+                    p Информируем вас об изменении стоимости ряда продуктов С-Терра.
+                    .pressactual-item-page__text-block__btn-group
+                        a.btn.btn-primary-inverse.btn-round(href="#", disabled)
+                            +svg-icon('chevron-left', 7, 12)
+                        a.btn.btn-primary-inverse.btn-round(href="#")
+                            +svg-icon('chevron-right', 7, 12)
+                        a.btn.btn-primary-inverse(href="#") Все объявления
+                    
+            .col.col-12
+                .pressactual-page__contacts
+                    .pressactual-page__contacts__title Контакты отдела продаж
+                    a.pressactual-page__contacts__phone-link(href="tel:+7 (499) 940-90-01") +7 (499) 940-90-01
+                    a.pressactual-page__contacts__email-link(href="mailto:sales@s-terra.ru") sales@s-terra.ru
+            
+            .pressactual-item-page__form
+                include ./contact-form.pug
+
+            

@@ -1,0 +1,6 @@
+mixin svg-icon(name, width, height)
+  svg(width=width height=height)
+    use(xlink:href="#i-" + name href="#i-" + name)
+mixin svg-icon-non-size(name)
+  svg()
+    use(xlink:href="#i-" + name href="#i-" + name)

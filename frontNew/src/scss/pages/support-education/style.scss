@@ -1,0 +1,254 @@
+.support-education-page{
+  margin-bottom: 100px;
+  .breadcrumb__list{
+    padding-bottom: 41px;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 120%;
+    color: #000066;
+  }
+
+  &__filter{
+    display: flex;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    &__item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 41px;
+      }
+
+    }
+
+    &__button {
+      @include button;
+      background: transparent;
+      color: var(--primary);
+      transition: color 250ms linear;
+
+      &:hover {
+        color: var(--primary-dark);
+      }
+
+      &.active {
+        color: var(--accent);
+
+        cursor: default;
+        &:hover {
+          color: var(--accent);
+        }
+        &:before {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 12px;
+          background: currentColor;
+        }
+      }
+    }
+    @include lg-tablet-up {
+      font-size: 17px;
+
+      &__item {
+        &:not(:last-child) {
+          margin-right: calc(2 * var(--space-unit));
+        }
+      }
+    }
+  }
+  &__control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 49px;
+    .custom-select{
+      width: 295px;
+      height: 42px;
+      min-height: 42px;
+    }
+    .search-field{
+      max-width: 854px;
+      width: 100%;
+      svg{
+        color: #000066;
+      }
+
+    }
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 35px;
+  }
+  &__video{
+    &__item{
+      &__wrap{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+      }
+      &__title{
+        margin-top: 17px;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000066;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1020px){
+  .support-education-page{
+    margin-bottom: 80px;
+    .breadcrumb__list{
+      padding-bottom: 34px;
+    }
+    &__top{
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    &__title{
+      font-size: 32px;
+      line-height: 120%;
+    }
+
+    &__filter{
+      margin-top: 30px;
+      &__item {
+        &:not(:last-child) {
+        }
+
+      }
+
+      &__button {
+        @include button;
+        &:hover {
+        }
+
+        &.active {
+          &:hover {
+          }
+          &:before {
+          }
+        }
+      }
+      @include lg-tablet-up {
+        &__item {
+          &:not(:last-child) {
+          }
+        }
+      }
+    }
+    &__control{
+      margin-bottom: 36px;
+      &__select{
+        width: 278px;
+      }
+      .search-field{
+        width: 339px;
+      }
+    }
+    &__content{
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 32px;
+      grid-row-gap: 39px;
+
+    }
+    &__video{
+      &__item{
+        &__wrap{
+        }
+        &__title{
+          margin-top: 13px;
+          font-size: 15px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .support-education-page{
+    .breadcrumb__list{
+      padding-bottom: 24px;
+    }
+    &__top{
+    }
+    &__title{
+      font-size: 25px;
+      line-height: 120%;
+    }
+
+    &__filter{
+      margin-top: 19px;
+      &__item {
+        &:not(:last-child) {
+        }
+
+      }
+
+      &__button {
+        @include button;
+        &:hover {
+        }
+
+        &.active {
+          &:hover {
+          }
+          &:before {
+          }
+        }
+      }
+      @include lg-tablet-up {
+        &__item {
+          &:not(:last-child) {
+          }
+        }
+      }
+    }
+    &__control{
+      flex-direction: column;
+      margin-top: -15px;
+      margin-bottom: 41px;
+      .custom-select{
+        width: 100%;
+        margin-right: 0;
+      }
+      .search-field{
+        margin-left: 0;
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+    &__content{
+      grid-template-columns: 1fr;
+    }
+    &__video{
+      &__item{
+        &__wrap{
+        }
+        &__title{
+          margin-top: 11px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+<!-- CASES -->
+
+include ../../mixins/slider
+include ../../data/cases
+
+.home-cases
+  .container
+    h2.h1.home-cases__title Истории сотрудничества
+
+  #cases-slider.home-cases__slider
+    .scroll-slider
+      .scroll-slider-viewport
+        .scroll-slider-slides
+
+          each caseItem in cases
+            // SLIDE
+            section.scroll-slider-slide.c-col-6.c-col-lg-4
+              a.home-case.card(href="#")
+                .home-case__logo
+                  if caseItem.logo
+                    img(src=caseItem.logo)
+                  else
+                    .image-placeholder
+                h3.home-case__title !{caseItem.title}
+                .home-case__text !{caseItem.text}
+
+      .container
+        +slider-controls({
+          link: '#', name: 'Все кейсы'
+        })
+
+<!-- /CASES -->

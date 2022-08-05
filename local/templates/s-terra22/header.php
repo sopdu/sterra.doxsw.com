@@ -21,7 +21,7 @@ $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/plugins/datepicker.js');
 $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/plugins/slimscroll/slimscroll.js');
 $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/clamp.js', 1);
 $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/script.js', 1);
-
+require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
 ?><!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -388,7 +388,26 @@ $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/script.js', 1);
 								<div class="checkbox-label">Даю согласие на обработку своих персональных данных в соответствии с <a href="/upload/medialibrary/6c7/politika_obrabotki_personal_dannyh_sterra_29-11-2019.pdf" target="_blank">Политикой обработки персональных данных ООО «С-Терра СиЭсПи»</a>.</div>
 							</label>
 						</div>
-						<button class="btn btn-primary btn-block" type="submit">Отправить</button>
+
+                        <div class="form-field">
+                            <table border="0" style="border: 0">
+
+                                <tr>
+                                    <td style="border: 0">
+                                        <label class="form-label">Введите код с картинки</label>
+                                        <?//='<pre>'; print_r(htmlspecialchars($cpt->GetCodeCrypt())); '</pre>';?>
+                                        <input name="captcha_code" value="<?=htmlspecialchars($cpt->GetCodeCrypt());?>" type="hidden">
+                                        <input id="captcha_word" name="captcha_word" class="form-control" type="text">
+                                    </td>
+                                    <td style="border: 0">
+                                        <label class="form-label">&nbsp</label>
+                                        <img src="/bitrix/tools/captcha.php?captcha_code=<?=htmlspecialchars($cpt->GetCodeCrypt());?>">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <button class="btn btn-primary btn-block" type="submit">Отправить</button>
 					</form>
 				</div>
 			</div>

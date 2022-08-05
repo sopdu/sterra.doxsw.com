@@ -1,4 +1,5 @@
 <!-- CONTACT FORM -->
+<?require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha1.php");?>
 <div id="form" class="home-contact-form colored-block">
     <div class="container">
         <h2 class="home-contact-form__title">Закажите бесплатную консультацию</h2>
@@ -107,6 +108,12 @@
                         <input type="checkbox" name="agreement"><span class="checkbox-box"></span>
                         <div class="checkbox-label">Даю согласие на обработку своих персональных данных в соответствии с <a href="/upload/medialibrary/6c7/politika_obrabotki_personal_dannyh_sterra_29-11-2019.pdf" target="_blank">Политикой обработки персональных данных ООО «С-Терра СиЭсПи»</a>.</div>
                     </label>
+                </div>
+                <div class="form-field">
+                    <label class="form-label">Введите код с картинки</label>
+                    <input name="captcha_code" value="<?=htmlspecialchars($cpt1->GetCodeCrypt());?>" type="hidden">
+                    <input id="captcha_word" name="captcha_word" type="text">
+                    <img src="/bitrix/tools/captcha.php?captcha_code=<?=htmlspecialchars($cpt1->GetCodeCrypt());?>">
                 </div>
                 <div onclick='send(this);' class="home-contact-form__submit">
                     <button class="btn btn-primary btn-block" type="submit">Отправить</button>

@@ -11,7 +11,7 @@ $APPLICATION->SetPageProperty("title", "С-Терра: разработка пр
 $APPLICATION->SetTitle("С-Терра");
 
 if (!CModule::IncludeModule("iblock")) return;
-
+require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha1.php");
 /*
  * Getting solutions from 2 infoblocks and shuffle them
  * There is no standard component for this. Therefore, it is faster and easier to do it by writing through the API
@@ -949,6 +949,12 @@ else {
 										<div class="checkbox-label">Даю согласие на обработку своих персональных данных в соответствии с <a href="/upload/medialibrary/6c7/politika_obrabotki_personal_dannyh_sterra_29-11-2019.pdf" target="_blank">Политикой обработки персональных данных ООО «С-Терра СиЭсПи»</a>.</div>
 									</label>
 								</div>
+                                <div class="form-field">
+                                    <label class="form-label">Введите код с картинки</label>
+                                    <input name="captcha_code" value="<?=htmlspecialchars($cpt1->GetCodeCrypt());?>" type="hidden">
+                                    <input id="captcha_word" name="captcha_word" type="text">
+                                    <img src="/bitrix/tools/captcha.php?captcha_code=<?=htmlspecialchars($cpt1->GetCodeCrypt());?>">
+                                </div>
 								<div onclick='send(this);' class="home-contact-form__submit">
 									<button class="btn btn-primary btn-block" type="submit">Отправить</button>
 								</div>

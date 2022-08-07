@@ -110,10 +110,13 @@
                     </label>
                 </div>
                 <div class="form-field">
+                    <?/*
                     <label class="form-label">Введите код с картинки</label>
                     <input name="captcha_code" value="<?=htmlspecialchars($cpt1->GetCodeCrypt());?>" type="hidden">
                     <input id="captcha_word" name="captcha_word" type="text">
                     <img src="/bitrix/tools/captcha.php?captcha_code=<?=htmlspecialchars($cpt1->GetCodeCrypt());?>">
+                    */?>
+                    <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf9sVYhAAAAAGnG1GDbnOHdDGutA1yHFZxY6N2N"></div>
                 </div>
                 <div onclick='send(this);' class="home-contact-form__submit">
                     <button class="btn btn-primary btn-block" type="submit">Отправить</button>

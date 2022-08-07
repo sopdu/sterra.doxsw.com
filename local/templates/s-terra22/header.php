@@ -390,6 +390,7 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
 						</div>
 
                         <div class="form-field">
+                            <?/*
                             <table border="0" style="border: 0">
 
                                 <tr>
@@ -405,6 +406,9 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
                                     </td>
                                 </tr>
                             </table>
+                            */?>
+
+                            <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf9sVYhAAAAAGnG1GDbnOHdDGutA1yHFZxY6N2N"></div>
                         </div>
 
                         <button class="btn btn-primary btn-block" type="submit">Отправить</button>
@@ -483,6 +487,9 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
                         <label class="form-label" for="partner-text">Дополнительная информация</label>
                         <textarea class="form-control" id="partner-text" name="question"></textarea>
                       </div>
+                        <div class="form-field">
+                            <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf9sVYhAAAAAGnG1GDbnOHdDGutA1yHFZxY6N2N"></div>
+                        </div>
                       <div class="vacancy-form-footer">
                         <div class="form-field course-modal-form__confirm">
                           <label class="checkbox">
@@ -554,6 +561,9 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
                           <div class="checkbox-label">Я ознакомлен и согласен с <a target="_blank" href="https://www.s-terra.ru/upload/medialibrary/02d/Support_Service_2022_S-Terra.pdf">условиями технической поддержки</a>.</div>
                         </label>
                       </div>
+                        <div class="form-field course-modal-form__confirm">
+                            <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf9sVYhAAAAAGnG1GDbnOHdDGutA1yHFZxY6N2N"></div>
+                        </div>
                       <button class="btn btn-primary btn-block" type="submit">Отправить</button>
                     </form>
                   </div>

@@ -237,6 +237,9 @@ if(CModule::IncludeModule('iblock')) {
                       <div class="checkbox-label">Даю согласие на обработку своих персональных данных в соответствии с <a target="_blank" href="/upload/medialibrary/6c7/politika_obrabotki_personal_dannyh_sterra_29-11-2019.pdf">Политикой обработки персональных данных ООО «С-Терра СиЭсПи»</a>.</div>
                     </label>
                   </div>
+                    <div class="form-field home-contact-form__confirm">
+                        <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf9sVYhAAAAAGnG1GDbnOHdDGutA1yHFZxY6N2N"></div>
+                    </div>
                   <div class="home-contact-form__submit">
                     <button class="btn btn-primary btn-block" type="submit">Отправить</button>
                   </div>

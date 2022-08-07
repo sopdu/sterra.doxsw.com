@@ -39,7 +39,7 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript" data-skip-moving="true">

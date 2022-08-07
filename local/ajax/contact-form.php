@@ -6,21 +6,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/bitrix/modules/main/include/prolog_be
 //require_once ($_SERVER["DOCUMENT_ROOT"]."/local/ajax/captha.php");
 //include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
 
-function dump($value){
-    $filePath = $_SERVER["DOCUMENT_ROOT"].'/ilsDump.txt';
-    $file = fopen($filePath, "w");
-    fwrite($file, print_r($value, 1));
-    #fclose(); // не удалять - надо тестировать
-    return;
-}
-
-
-
-//if($APPLICATION->CaptchaCheckCode($_REQUEST["captcha_word"], $_REQUEST["captcha_code"])){
-
-    if(!empty($_REQUEST)) {
-        //dump($_REQUEST);
-    }
 
     $name = htmlspecialchars($_REQUEST["name"]);
     $company = htmlspecialchars($_REQUEST["company"]);
@@ -46,6 +31,5 @@ function dump($value){
         echo '{
   "success": true
 }';
-    }
-//}
+}
 ?>

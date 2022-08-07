@@ -950,10 +950,25 @@ else {
 									</label>
 								</div>
                                 <div class="form-field">
+                                    <?/*
+                                    <?$indexCatcha = new captcha()?>
+                                    <?include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
+                                    $cpt = new CCaptcha();
+                                    $captchaPass = COption::GetOptionString("main", "captcha_password", "");
+                                    if(strlen($captchaPass) <= 0)
+                                    {
+                                        $captchaPass = randString(10);
+                                        COption::SetOptionString("main", "captcha_password", $captchaPass);
+                                    }
+                                    $cpt->SetCodeCrypt($captchaPass);
+                                    ?>
+                                    <?#='<pre>'; print_r($indexCatcha->main()); '</pre>';?>
                                     <label class="form-label">Введите код с картинки</label>
-                                    <input name="captcha_code" value="<?=htmlspecialchars($cpt1->GetCodeCrypt());?>" type="hidden">
+                                    <input name="captcha_code" value="<?=htmlspecialchars($cpt->GetCodeCrypt());?>" type="hidden">
                                     <input id="captcha_word" name="captcha_word" type="text">
-                                    <img src="/bitrix/tools/captcha.php?captcha_code=<?=htmlspecialchars($cpt1->GetCodeCrypt());?>">
+                                    <img src="/bitrix/tools/captcha.php?captcha_code=<?=htmlspecialchars($cpt->GetCodeCrypt());?>">
+                                    */?>
+                                    <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf9sVYhAAAAAGnG1GDbnOHdDGutA1yHFZxY6N2N"></div>
                                 </div>
 								<div onclick='send(this);' class="home-contact-form__submit">
 									<button class="btn btn-primary btn-block" type="submit">Отправить</button>
